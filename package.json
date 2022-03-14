@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "yarn workspace my-resume-app start",
-    "build": "yarn workspace my-resume-app build"
+    "start": "yarn workspace my-resume-react-app start",
+    "build": "yarn workspace my-resume-react-app build"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,5 @@
   },
   "homepage": "https://github.com/Simplify4Me2/my-resume#readme",
   "private": "true",
-  "workspaces": ["my-resume-app"]
+  "workspaces": ["my-resume-react-app"]
 }
