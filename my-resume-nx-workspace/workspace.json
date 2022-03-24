@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "my-resume-react-app": "apps/my-resume-react-app",
+    "my-resume-react-app-e2e": "apps/my-resume-react-app-e2e"
+  }
+}
