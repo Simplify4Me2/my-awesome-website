@@ -1,5 +1,4 @@
 import React from "react";
-import "./home.css";
 import {
   AppBar,
   Box,
@@ -20,7 +19,7 @@ export const Home: React.FC = (props) => {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
-            <DeveloperMode className="padding-right" />
+            <DeveloperMode className="pr-1" />
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Simon Vereecke
             </Typography>
@@ -28,7 +27,7 @@ export const Home: React.FC = (props) => {
           </Toolbar>
         </AppBar>
       </Box>
-      <div className="card">
+      <div className="flex justify-center pt-5">
         <Card sx={{ minWidth: 275 }}>
           <CardContent>
             <Typography
