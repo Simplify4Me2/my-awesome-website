@@ -1,11 +1,4 @@
 import React from "react";
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  Typography,
-} from "@mui/material";
 import { Header } from "./header";
 import { CareerTimeline } from "./career-timeline";
 import { IntroductionCard } from "./introduction-card";

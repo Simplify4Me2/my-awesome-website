@@ -10,9 +10,11 @@ import {
     Typography,
   } from "@mui/material";
   import { DeveloperMode } from "@mui/icons-material";
+  import picture from '/index-hero.jpg';
 
 export const IntroductionCard: React.FC = (props) => {
     return <Card sx={{ minWidth: 275 }}>
+      <img className="h-72 m-5" src="/index-hero.jpg" />
     <CardContent>
       <Typography
         sx={{ fontSize: 14 }}
