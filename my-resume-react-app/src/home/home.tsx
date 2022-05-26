@@ -3,8 +3,6 @@ import { Header } from "./header";
 import { CareerTimeline } from "./career-timeline";
 import { IntroductionCard } from "./introduction-card";
 
-interface Props {}
-
 export const Home: React.FC = (props) => {
   return (
     <>
