@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "my-resume",
+  "version": "1.0.0",
+  "repository": "https://github.com/Simplify4Me2/my-resume.git",
+  "author": "Simon <simon.vereecke@live.com>",
+  "license": "MIT",
+  "workspaces": ["./my-resume-react-app"],
+  "scripts": {
+    "build": "yarn workspace my-resume-react-app build",
+    "start": "yarn workspace my-resume-react-app start",
+    "test": "yarn workspace my-resume-react-app test"
+  }
+}
