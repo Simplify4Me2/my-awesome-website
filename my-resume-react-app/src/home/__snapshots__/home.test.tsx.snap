@@ -3,7 +3,7 @@
 exports[`home renders 1`] = `
 <div>
   <div
-    class="flex justify-center pt-5"
+    class="flex flex-col items-center"
   />
 </div>
 `;
