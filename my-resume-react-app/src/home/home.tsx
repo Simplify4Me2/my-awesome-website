@@ -7,10 +7,10 @@ export const Home: React.FC = (props) => {
   return (
     <>
       <Header />
-      <div className="flex justify-center pt-5">
+      <div className="flex flex-col items-center">
         <IntroductionCard />
+        <CareerTimeline />
       </div>
-      <CareerTimeline />
     </>
   );
 };

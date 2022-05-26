@@ -9,7 +9,7 @@ import {
 
 export const IntroductionCard: React.FC = (props) => {
   return (
-    <Card sx={{ minWidth: 275 }}>
+    <Card className="justify-content m-3 pt-5" sx={{ minWidth: 275 }}>
       <img className="h-72 m-5" src="/index-hero.jpg" alt="azure-themed-hero" />
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
