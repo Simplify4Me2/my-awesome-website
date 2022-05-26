@@ -8,51 +8,55 @@ import {
   TimelineOppositeContent,
   TimelineSeparator,
 } from "@mui/lab";
-import { DeveloperMode } from "@mui/icons-material";
+import { AccessTime, ChildCare } from "@mui/icons-material";
+import { Typography } from "@mui/material";
 
 
 export const CareerTimeline: React.FC = (props) => {
   return (
     <Timeline position="alternate">
       <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
+        <TimelineOppositeContent
+          sx={{ m: 'auto 0' }}
+          align="right"
+          variant="body2"
+          color="text.secondary"
+        >
           2020 - Current
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot><DeveloperMode /></TimelineDot>
+          <TimelineConnector />
+          <TimelineDot color="primary">
+            <AccessTime />
+          </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent>Protime</TimelineContent>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
+          <Typography variant="h5" component="span">
+            Protime
+          </Typography>
+          <Typography color="text.secondary">Much more than time registration and workforce management</Typography>
+        </TimelineContent>
       </TimelineItem>
-      {/* <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
-          10:00 am
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>Code</TimelineContent>
-      </TimelineItem> */}
-      {/* <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
-          2017 - 2020
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>Cegeka</TimelineContent>
-      </TimelineItem> */}
       <TimelineItem>
-        <TimelineOppositeContent >
-          Cegeka
+        <TimelineOppositeContent
+          sx={{ py: '12px', px: 2 }}
+        >
+          <Typography variant="h5" component="span">
+            Cegeka
+          </Typography>
+          <Typography color="text.secondary">In close cooperation</Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineConnector />
+          <TimelineDot color="info">
+            <ChildCare />
+          </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent color="text.secondary">2017 - 2020</TimelineContent>
+        <TimelineContent sx={{ m: 'auto 0' }}
+          variant="body2"
+          color="text.secondary">2017 - 2020</TimelineContent>
       </TimelineItem>
     </Timeline>
   );
