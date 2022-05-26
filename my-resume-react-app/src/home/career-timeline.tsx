@@ -8,6 +8,8 @@ import {
   TimelineOppositeContent,
   TimelineSeparator,
 } from "@mui/lab";
+import { DeveloperMode } from "@mui/icons-material";
+
 
 export const CareerTimeline: React.FC = (props) => {
   return (
@@ -17,7 +19,7 @@ export const CareerTimeline: React.FC = (props) => {
           2020 - Current
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot><DeveloperMode /></TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>Protime</TimelineContent>
