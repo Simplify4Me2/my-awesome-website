@@ -19,3 +19,9 @@
 - https://catalins.tech/14-best-web-developer-portfolios-to-get-inspiration
 - http://www.pascalvangemert.nl/#/experiences
 - https://www.sitebuilderreport.com/inspiration/web-developer-designer-portfolios
+
+Free API:
+- https://docs.microsoft.com/en-us/azure/cognitive-services/
+- https://rapidapi.com/api-sports/api/api-football/
+- https://apipheny.io/free-api/
+- https://world.openfoodfacts.org/data
