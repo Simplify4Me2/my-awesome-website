@@ -1,20 +1,21 @@
 import React from "react";
+import { GridSpace } from "./grid-space";
 
 export const TicTacToe: React.FC = () => {
   return (
-      <>
-    <span>Tic Tac ToDo</span>
-    <div className="grid grid-cols-3">
-        <div className="border-2">x1</div>
-        <div className="border-2">x2</div>
-        <div className="border-2">x3</div>
-        <div className="border-2">x4</div>
-        <div className="border-2">x5</div>
-        <div className="border-2">x6</div>
-        <div className="border-2">x7</div>
-        <div className="border-2">x8</div>
-        <div className="border-2">x9</div>
-    </div>
-      </>
+    <>
+      <span>Tic Tac ToDo</span>
+      <div className="grid grid-cols-3 gap-12 m-12">
+        <GridSpace mark="x1" />
+        <GridSpace mark="x2" />
+        <GridSpace mark="x3" />
+        <GridSpace mark="x4" />
+        <GridSpace mark="x5" />
+        <GridSpace mark="x6" />
+        <GridSpace mark="x7" />
+        <GridSpace mark="x8" />
+        <GridSpace mark="x9" />
+      </div>
+    </>
   );
 };

@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { TicTacToe } from "./tic-tac-toe/tic-tac-toe";
 
+// TODO: https://reactjs.org/docs/code-splitting.html#route-based-code-splitting
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
