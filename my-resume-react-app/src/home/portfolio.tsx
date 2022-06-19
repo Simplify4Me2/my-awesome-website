@@ -13,6 +13,8 @@ export const Portfolio: React.FC = () => {
       </span>
       <ul>
           <li className="underline"><Link to="/tic-tac-toe">Tic Tac Toe</Link></li>
+          <li className="underline"><Link to="/tic-tac-toe">Planning Poker</Link></li>
+          <li className="underline"><Link to="/tic-tac-toe">Waste snake</Link></li>
       </ul>
     </div>
   );

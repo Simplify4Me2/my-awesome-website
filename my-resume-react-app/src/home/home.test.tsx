@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '@testing-library/react';
 
 import { Home } from './home';
@@ -7,7 +6,9 @@ jest.mock('./header');
 jest.mock('./career-timeline');
 jest.mock('./introduction-card');
 jest.mock('./certificates');
-jest.mock('./portfolio');
+jest.mock('./portfolio', () => ({
+    Portfolio: (props: object) => `Portfolio ${JSON.stringify(props)}`
+}));
 
 describe("home", () => {
     it("renders", () => {
