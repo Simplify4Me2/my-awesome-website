@@ -13,7 +13,11 @@ describe("useTicTacToe", () => {
 
         act(() => {
             result.current.setMark(Mark.nought, 0);
+        });
+        act(() => {
             result.current.setMark(Mark.nought, 1);
+        });
+        act(() => {
             result.current.setMark(Mark.nought, 2);
         });
 

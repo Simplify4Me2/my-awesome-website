@@ -13,7 +13,7 @@ export const useTicTacToe = () => {
   };
 
   const verifyWinner = (): boolean => {
-    if (state[2] === Mark.nought) return true;
+    if (state[2] === Mark.nought) return false;
     return false;
   };
 
