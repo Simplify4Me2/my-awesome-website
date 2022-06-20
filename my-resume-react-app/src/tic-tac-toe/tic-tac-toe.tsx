@@ -1,20 +1,26 @@
 import React from "react";
+
 import { GridSpace } from "./grid-space";
+import { Mark } from "./mark.model";
+import { useTicTacToe } from "./useTicTacToe";
 
 export const TicTacToe: React.FC = () => {
+
+  const { spaces, setMark, verifyWinner} = useTicTacToe();
+
+  const handleClick = (position: number) => {
+    console.log(`${position} clicked`);
+    setMark(Mark.cross, position);
+    verifyWinner();
+  };
+
   return (
     <>
-      <span>Tic Tac ToDo</span>
-      <div className="grid grid-cols-3 gap-12 m-12">
-        <GridSpace mark="x1" />
-        <GridSpace mark="x2" />
-        <GridSpace mark="x3" />
-        <GridSpace mark="x4" />
-        <GridSpace mark="x5" />
-        <GridSpace mark="x6" />
-        <GridSpace mark="x7" />
-        <GridSpace mark="x8" />
-        <GridSpace mark="x9" />
+      <span className="block">Tic Tac ToDo</span>
+      <div className="inline-grid grid-cols-3 gap-12 m-12 min-w-0 bg-orange-200">
+        {[...Array(spaces)].map((value, index) => {
+          return <GridSpace key={index} position={index} onClick={() => handleClick(index)} />
+        })}
       </div>
     </>
   );

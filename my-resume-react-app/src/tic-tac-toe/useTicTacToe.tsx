@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Mark } from "./mark.model";
 
-const newGame: string[] = new Array<string>(9);
+const BOARD_SIZE: number = 9;
+
+const newGame: string[] = new Array<string>(BOARD_SIZE);
 
 export const useTicTacToe = () => {
     const [state, setState] = useState<string[]>(newGame);
@@ -12,5 +14,5 @@ export const useTicTacToe = () => {
 
     const verifyWinner = (): boolean => false;
 
-    return {setMark, verifyWinner};
+    return {spaces: BOARD_SIZE, setMark, verifyWinner};
 }
