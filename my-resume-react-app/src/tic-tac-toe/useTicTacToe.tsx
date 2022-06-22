@@ -55,5 +55,5 @@ export const useTicTacToe = () => {
     return false;
   };
 
-  return { spaces: BOARD_SIZE, getSpaceMark, markBoardSpace, toggleMark, verifyWinner };
+  return { spaces: BOARD_SIZE, mark: markState, getSpaceMark, markBoardSpace, toggleMark, verifyWinner };
 };

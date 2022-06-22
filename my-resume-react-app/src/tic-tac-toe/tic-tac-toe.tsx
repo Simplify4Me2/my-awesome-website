@@ -1,17 +1,20 @@
 import React from "react";
 
 import { GridSpace } from "./grid-space";
-import { Mark } from "./mark.model";
 import { useTicTacToe } from "./useTicTacToe";
 
 export const TicTacToe: React.FC = () => {
 
-  const { spaces, getSpaceMark, markBoardSpace, toggleMark, verifyWinner} = useTicTacToe();
+  const { spaces, mark, getSpaceMark, markBoardSpace, toggleMark, verifyWinner} = useTicTacToe();
+
+  let won: boolean = false;
 
   const handleClick = (position: number) => {
     console.log(`${position} clicked`);
-    markBoardSpace(Mark.cross, position);
-    verifyWinner();
+    markBoardSpace(mark, position);
+    won = verifyWinner();
+    console.log(won);
+    toggleMark();
   };
 
   return (
@@ -22,6 +25,8 @@ export const TicTacToe: React.FC = () => {
           return <GridSpace key={index} mark={getSpaceMark(index)} position={index} onClick={() => handleClick(index)} />
         })}
       </div>
+      <h2>Currently playing: <span>{mark}</span></h2>
+      {won && <h3>Winner !!!</h3>}
     </>
   );
 };
