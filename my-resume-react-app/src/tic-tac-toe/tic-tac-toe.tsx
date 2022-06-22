@@ -6,11 +6,11 @@ import { useTicTacToe } from "./useTicTacToe";
 
 export const TicTacToe: React.FC = () => {
 
-  const { spaces, setMark, verifyWinner} = useTicTacToe();
+  const { spaces, getSpaceMark, markBoardSpace, toggleMark, verifyWinner} = useTicTacToe();
 
   const handleClick = (position: number) => {
     console.log(`${position} clicked`);
-    setMark(Mark.cross, position);
+    markBoardSpace(Mark.cross, position);
     verifyWinner();
   };
 
@@ -19,7 +19,7 @@ export const TicTacToe: React.FC = () => {
       <span className="block">Tic Tac ToDo</span>
       <div className="inline-grid grid-cols-3 gap-12 m-12 min-w-0 bg-orange-200">
         {[...Array(spaces)].map((value, index) => {
-          return <GridSpace key={index} position={index} onClick={() => handleClick(index)} />
+          return <GridSpace key={index} mark={getSpaceMark(index)} position={index} onClick={() => handleClick(index)} />
         })}
       </div>
     </>
