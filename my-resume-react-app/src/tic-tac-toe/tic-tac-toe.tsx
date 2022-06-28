@@ -5,7 +5,7 @@ import { GridSpace } from "./grid-space";
 import { useTicTacToe } from "./useTicTacToe";
 
 export const TicTacToe: React.FC = () => {
-  const { spaces, mark, gameOver, getSpaceMark, markBoardSpace, resetGame } =
+  const { spaces, mark, winner, gameOver, getSpaceMark, markBoardSpace, resetGame } =
     useTicTacToe();
 
 
@@ -22,7 +22,7 @@ export const TicTacToe: React.FC = () => {
             <GridSpace
               key={index}
               mark={getSpaceMark(index)}
-              onClick={() => handleClick(index)}
+              onClick={() => !getSpaceMark(index) && handleClick(index)}
               disabled={gameOver}
             />
           );
@@ -31,7 +31,7 @@ export const TicTacToe: React.FC = () => {
       <h2>
         Currently playing: <span>{mark}</span>
       </h2>
-      {gameOver && <h3>Winner !!!</h3>}
+      {gameOver && <h3>Winner is {winner} !!!</h3>}
       <div className="m-2">
         <Button variant="outlined" onClick={resetGame}>Restart Game</Button>
       </div>

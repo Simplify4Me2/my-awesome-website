@@ -66,7 +66,7 @@ export function useTicTacToe() {
   return {
     spaces: BOARD_SIZE,
     mark: markState,
-    winner: markState,
+    winner: gameOverState && markState,
     gameOver: gameOverState,
     getSpaceMark,
     markBoardSpace,
