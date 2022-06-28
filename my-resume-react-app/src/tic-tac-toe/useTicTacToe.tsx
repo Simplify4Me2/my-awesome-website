@@ -5,7 +5,7 @@ const BOARD_SIZE: number = 9;
 
 const newGame: (Mark | undefined)[] = new Array<Mark | undefined>(BOARD_SIZE);
 
-export const useTicTacToe = (onWin: (winner: Mark) => void) => {
+export function useTicTacToe(onWin: (winner: Mark) => void) {
   const [boardState, setBoardState] = useState<(Mark | undefined)[]>(newGame);
   const [markState, setMarkState] = useState<Mark>(Mark.nought);
   const [winnerState, setWinnerState] = useState<Mark | undefined>(undefined);
@@ -64,6 +64,7 @@ export const useTicTacToe = (onWin: (winner: Mark) => void) => {
       setGameOverState(true);
     } 
     else setMarkState(markState === Mark.nought ? Mark.cross : Mark.nought);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [boardState]);
 
   return {
