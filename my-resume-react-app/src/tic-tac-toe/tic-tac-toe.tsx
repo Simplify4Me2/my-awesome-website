@@ -27,8 +27,8 @@ export const TicTacToe: React.FC = () => {
             <GridSpace
               key={index}
               mark={getSpaceMark(index)}
-              position={index}
               onClick={() => handleClick(index)}
+              disabled={gameOver}
             />
           );
         })}
