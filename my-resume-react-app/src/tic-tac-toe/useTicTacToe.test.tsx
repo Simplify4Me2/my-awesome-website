@@ -7,163 +7,279 @@ import { useTicTacToe } from "./useTicTacToe";
 describe("useTicTacToe", () => {
   describe("verifyWinner", () => {
     it("has a winner if there are 3 identical horizontal marks on the first row", () => {
-      const { result } = renderHook(() => useTicTacToe());
+      const mockHandleWin = jest.fn();
+      const { result } = renderHook(() => useTicTacToe(mockHandleWin));
 
-      const initialResult = result.current.verifyWinner();
-      expect(initialResult).toBe(false);
-
-      act(() => {
-        result.current.markBoardSpace(Mark.nought, 0);
-      });
-      act(() => {
-        result.current.markBoardSpace(Mark.nought, 1);
-      });
-      act(() => {
-        result.current.markBoardSpace(Mark.nought, 2);
-      });
-
-      const endResult = result.current.verifyWinner();
-      expect(endResult).toBe(true);
-    });
-
-    it("has a winner if there are 3 identical horizontal marks on the second row", () => {
-      const { result } = renderHook(() => useTicTacToe());
-
-      const initialResult = result.current.verifyWinner();
-      expect(initialResult).toBe(false);
+      expect(mockHandleWin).not.toBeCalled();
 
       act(() => {
         result.current.markBoardSpace(Mark.cross, 3);
       });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.nought, 0);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
       act(() => {
         result.current.markBoardSpace(Mark.cross, 4);
       });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.nought, 1);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.cross, 6);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.nought, 2);
+      });
+      expect(mockHandleWin).toBeCalledWith(Mark.nought);
+    });
+
+    it("has a winner if there are 3 identical horizontal marks on the second row", () => {
+        const mockHandleWin = jest.fn();
+        const { result } = renderHook(() => useTicTacToe(mockHandleWin));
+  
+        expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.cross, 3);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.nought, 0);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.cross, 4);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.nought, 1);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
       act(() => {
         result.current.markBoardSpace(Mark.cross, 5);
       });
-
-      const endResult = result.current.verifyWinner();
-      expect(endResult).toBe(true);
+      expect(mockHandleWin).toBeCalledWith(Mark.cross);
     });
 
     it("has a winner if there are 3 identical horizontal marks on the third row", () => {
-      const { result } = renderHook(() => useTicTacToe());
+        const mockHandleWin = jest.fn();
+        const { result } = renderHook(() => useTicTacToe(mockHandleWin));
+  
+        expect(mockHandleWin).not.toBeCalled();
 
-      const initialResult = result.current.verifyWinner();
-      expect(initialResult).toBe(false);
+        act(() => {
+            result.current.markBoardSpace(Mark.cross, 5);
+          });
+          expect(mockHandleWin).not.toBeCalled();
 
       act(() => {
         result.current.markBoardSpace(Mark.nought, 6);
       });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.cross, 4);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
       act(() => {
         result.current.markBoardSpace(Mark.nought, 7);
       });
-      act(() => {
-        result.current.markBoardSpace(Mark.nought, 8);
-      });
-
-      const endResult = result.current.verifyWinner();
-      expect(endResult).toBe(true);
-    });
-
-    it("has a winner if there are 3 identical vertical marks in the first column", () => {
-      const { result } = renderHook(() => useTicTacToe());
-
-      const initialResult = result.current.verifyWinner();
-      expect(initialResult).toBe(false);
+      expect(mockHandleWin).not.toBeCalled();
 
       act(() => {
         result.current.markBoardSpace(Mark.cross, 0);
       });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.nought, 8);
+      });
+      expect(mockHandleWin).toBeCalledWith(Mark.nought);
+    });
+
+    it("has a winner if there are 3 identical vertical marks in the first column", () => {
+        const mockHandleWin = jest.fn();
+        const { result } = renderHook(() => useTicTacToe(mockHandleWin));
+  
+        expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.cross, 0);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.nought, 7);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
       act(() => {
         result.current.markBoardSpace(Mark.cross, 3);
       });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.nought, 8);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
       act(() => {
         result.current.markBoardSpace(Mark.cross, 6);
       });
-
-      const endResult = result.current.verifyWinner();
-      expect(endResult).toBe(true);
+      expect(mockHandleWin).toBeCalledWith(Mark.cross);
     });
 
     it("has a winner if there are 3 identical vertical marks in the second column", () => {
-      const { result } = renderHook(() => useTicTacToe());
+        const mockHandleWin = jest.fn();
+        const { result } = renderHook(() => useTicTacToe(mockHandleWin));
+  
+        expect(mockHandleWin).not.toBeCalled();
 
-      const initialResult = result.current.verifyWinner();
-      expect(initialResult).toBe(false);
+        act(() => {
+            result.current.markBoardSpace(Mark.cross, 8);
+          });
+          expect(mockHandleWin).not.toBeCalled();
 
       act(() => {
         result.current.markBoardSpace(Mark.nought, 1);
       });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.cross, 0);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
       act(() => {
         result.current.markBoardSpace(Mark.nought, 4);
       });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.cross, 3);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
       act(() => {
         result.current.markBoardSpace(Mark.nought, 7);
       });
-
-      const endResult = result.current.verifyWinner();
-      expect(endResult).toBe(true);
+      expect(mockHandleWin).toBeCalledWith(Mark.nought);
     });
 
     it("has a winner if there are 3 identical vertical marks in the third column", () => {
-      const { result } = renderHook(() => useTicTacToe());
-
-      const initialResult = result.current.verifyWinner();
-      expect(initialResult).toBe(false);
+        const mockHandleWin = jest.fn();
+        const { result } = renderHook(() => useTicTacToe(mockHandleWin));
+  
+        expect(mockHandleWin).not.toBeCalled();
 
       act(() => {
         result.current.markBoardSpace(Mark.cross, 2);
       });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.nought, 4);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
       act(() => {
         result.current.markBoardSpace(Mark.cross, 5);
       });
+      expect(mockHandleWin).not.toBeCalled();
+      
+      act(() => {
+        result.current.markBoardSpace(Mark.nought, 0);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+      
       act(() => {
         result.current.markBoardSpace(Mark.cross, 8);
       });
-
-      const endResult = result.current.verifyWinner();
-      expect(endResult).toBe(true);
+      expect(mockHandleWin).toBeCalledWith(Mark.cross);
     });
 
     it("has a winner if there are 3 identical diagonal marks from the top left corner", () => {
-      const { result } = renderHook(() => useTicTacToe());
+        const mockHandleWin = jest.fn();
+        const { result } = renderHook(() => useTicTacToe(mockHandleWin));
+  
+        expect(mockHandleWin).not.toBeCalled();
 
-      const initialResult = result.current.verifyWinner();
-      expect(initialResult).toBe(false);
+        act(() => {
+            result.current.markBoardSpace(Mark.cross, 2);
+          });
+          expect(mockHandleWin).not.toBeCalled();
+    
+      act(() => {
+        result.current.markBoardSpace(Mark.nought, 0);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+    
+      act(() => {
+        result.current.markBoardSpace(Mark.cross, 1);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.nought, 4);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+    
+      act(() => {
+        result.current.markBoardSpace(Mark.cross, 5);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.nought, 8);
+      });
+      expect(mockHandleWin).toBeCalledWith(Mark.nought);
+    });
+
+    it("has a winner if there are 3 identical diagonal marks from the top right corner", () => {
+        const mockHandleWin = jest.fn();
+        const { result } = renderHook(() => useTicTacToe(mockHandleWin));
+  
+        expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.cross, 2);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+
+      act(() => {
+        result.current.markBoardSpace(Mark.nought, 5);
+      });
+      expect(mockHandleWin).not.toBeCalled();
+    
+      act(() => {
+        result.current.markBoardSpace(Mark.cross, 4);
+      });
+      expect(mockHandleWin).not.toBeCalled();
 
       act(() => {
         result.current.markBoardSpace(Mark.nought, 0);
       });
-      act(() => {
-        result.current.markBoardSpace(Mark.nought, 4);
-      });
-      act(() => {
-        result.current.markBoardSpace(Mark.nought, 8);
-      });
+      expect(mockHandleWin).not.toBeCalled();
 
-      const endResult = result.current.verifyWinner();
-      expect(endResult).toBe(true);
-    });
-
-    it("has a winner if there are 3 identical diagonal marks from the top right corner", () => {
-      const { result } = renderHook(() => useTicTacToe());
-
-      const initialResult = result.current.verifyWinner();
-      expect(initialResult).toBe(false);
-
-      act(() => {
-        result.current.markBoardSpace(Mark.cross, 2);
-      });
-      act(() => {
-        result.current.markBoardSpace(Mark.cross, 4);
-      });
       act(() => {
         result.current.markBoardSpace(Mark.cross, 6);
       });
-
-      const endResult = result.current.verifyWinner();
-      expect(endResult).toBe(true);
+      expect(mockHandleWin).toBeCalledWith(Mark.cross);
     });
   });
 });
