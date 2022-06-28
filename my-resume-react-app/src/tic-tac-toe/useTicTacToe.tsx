@@ -5,10 +5,9 @@ const BOARD_SIZE: number = 9;
 
 const newGame: (Mark | undefined)[] = new Array<Mark | undefined>(BOARD_SIZE);
 
-export function useTicTacToe(onWin: (winner: Mark) => void) {
+export function useTicTacToe() {
   const [boardState, setBoardState] = useState<(Mark | undefined)[]>(newGame);
   const [markState, setMarkState] = useState<Mark>(Mark.nought);
-  const [winnerState, setWinnerState] = useState<Mark | undefined>(undefined);
   const [gameOverState, setGameOverState] = useState<boolean>(false);
 
   const getSpaceMark = (position: number) => {
@@ -54,15 +53,12 @@ export function useTicTacToe(onWin: (winner: Mark) => void) {
   const resetGame = () => {
     setBoardState(newGame);
     setMarkState(Mark.nought);
-    setWinnerState(undefined);
     setGameOverState(false);
   };
 
   useEffect(() => {
-    if (verifyWinner(boardState)) {
-      onWin(markState);
+    if (verifyWinner(boardState)) 
       setGameOverState(true);
-    } 
     else setMarkState(markState === Mark.nought ? Mark.cross : Mark.nought);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [boardState]);
@@ -70,7 +66,7 @@ export function useTicTacToe(onWin: (winner: Mark) => void) {
   return {
     spaces: BOARD_SIZE,
     mark: markState,
-    winner: winnerState,
+    winner: markState,
     gameOver: gameOverState,
     getSpaceMark,
     markBoardSpace,

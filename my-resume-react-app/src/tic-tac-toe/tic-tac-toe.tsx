@@ -2,16 +2,11 @@ import { Button } from "@mui/material";
 import React from "react";
 
 import { GridSpace } from "./grid-space";
-import { Mark } from "./mark.model";
 import { useTicTacToe } from "./useTicTacToe";
 
 export const TicTacToe: React.FC = () => {
-  const handleWin = (winner: Mark) => {
-    console.log("We have a winner: ", winner);
-  };
-
   const { spaces, mark, gameOver, getSpaceMark, markBoardSpace, resetGame } =
-    useTicTacToe(handleWin);
+    useTicTacToe();
 
 
   const handleClick = (position: number) => {
