@@ -41,14 +41,10 @@ export function useTicTacToe() {
       board[4] === board[7]) ||
     (board[2] !== undefined && board[2] === board[5] && board[5] === board[8]);
 
-  const verifyWinnerDiagonal = (board: (Mark | undefined)[]): boolean => {
-    if (board[4] !== undefined)
-      return (
-        (board[0] === board[4] && board[4] === board[8]) ||
-        (board[2] === board[4] && board[4] === board[6])
-      );
-    return false;
-  };
+  const verifyWinnerDiagonal = (board: (Mark | undefined)[]): boolean =>
+    board[4] !== undefined &&
+    ((board[0] === board[4] && board[4] === board[8]) ||
+      (board[2] === board[4] && board[4] === board[6]));
 
   const resetGame = () => {
     setBoardState(newGame);
@@ -57,8 +53,7 @@ export function useTicTacToe() {
   };
 
   useEffect(() => {
-    if (verifyWinner(boardState)) 
-      setGameOverState(true);
+    if (verifyWinner(boardState)) setGameOverState(true);
     else setMarkState(markState === Mark.nought ? Mark.cross : Mark.nought);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [boardState]);
@@ -72,4 +67,4 @@ export function useTicTacToe() {
     markBoardSpace,
     resetGame,
   };
-};
+}

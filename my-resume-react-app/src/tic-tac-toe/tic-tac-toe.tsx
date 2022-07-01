@@ -23,7 +23,7 @@ export const TicTacToe: React.FC = () => {
               key={index}
               mark={getSpaceMark(index)}
               onClick={() => !getSpaceMark(index) && handleClick(index)}
-              disabled={gameOver}
+              disabled={gameOver || !!getSpaceMark(index)}
             />
           );
         })}
