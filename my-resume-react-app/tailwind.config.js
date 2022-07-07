@@ -20,8 +20,8 @@ module.exports = {
         },
       },
       animation: {
-        'waving-hand': 'wave 2s linear infinite',
-        'draw-cross': 'draw_line 2s linear forwards',
+        'waving-hand': 'wave 2s linear forwards',
+        'draw-cross': 'draw_line 2s linear infinite',
       }
     },
   },

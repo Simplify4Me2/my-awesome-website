@@ -15,7 +15,6 @@ export const TicTacToe: React.FC = () => {
 
   return (
     <>
-      <span className="block">Tic Tac ToDo</span>
       <div className="inline-grid grid-cols-3 gap-12 m-12 min-w-0 bg-orange-200">
         {[...Array(spaces)].map((value, index) => {
           return (
