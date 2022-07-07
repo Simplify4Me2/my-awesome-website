@@ -25,3 +25,6 @@ Free API:
 - https://rapidapi.com/api-sports/api/api-football/
 - https://apipheny.io/free-api/
 - https://world.openfoodfacts.org/data
+
+Animations:
+- https://www.hongkiat.com/blog/svg-animations/
