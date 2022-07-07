@@ -1,5 +1,9 @@
 import React from "react";
 import { Mark } from "./mark.model";
+// import Cross from './assets/Cross.svg';
+// import Cross from '../../public/assets/Cross.svg';
+import { ReactComponent as Cross} from './Cross.svg';
+import { ReactComponent as Nought} from './Nought.svg';
 
 interface IGridSpaceProps {
     mark?: Mark;
@@ -15,7 +19,10 @@ export const GridSpace: React.FC<IGridSpaceProps> = ({mark, disabled, onClick}) 
       <h1>{`${mark || ''}`}</h1>
     </div>)}
     {disabled && (<div className="flex justify-center items-center h-56 w-56 border-2 bg-teal-500 min-w-full animate-waving-hand">
-      <h1>{`${mark || ''}`}</h1>
+      {/* <h1>{`${mark || ''}`}</h1> */}
+      {mark === Mark.cross && <Cross />}
+      {mark === Mark.nought && <Nought />}
+      
     </div>)}
     </>
   );
