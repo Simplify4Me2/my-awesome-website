@@ -1,13 +1,20 @@
 import { Button } from "@mui/material";
 import React from "react";
+import { Header } from "../components/header";
 
 import { GridSpace } from "./grid-space";
 import { useTicTacToe } from "./useTicTacToe";
 
 export const TicTacToe: React.FC = () => {
-  const { spaces, mark, winner, gameOver, getSpaceMark, markBoardSpace, resetGame } =
-    useTicTacToe();
-
+  const {
+    spaces,
+    mark,
+    winner,
+    gameOver,
+    getSpaceMark,
+    markBoardSpace,
+    resetGame,
+  } = useTicTacToe();
 
   const handleClick = (position: number) => {
     markBoardSpace(mark, position);
@@ -15,6 +22,7 @@ export const TicTacToe: React.FC = () => {
 
   return (
     <>
+      <Header />
       <div className="inline-grid grid-cols-3 gap-12 m-12 min-w-0 bg-orange-200">
         {[...Array(spaces)].map((value, index) => {
           return (
@@ -32,7 +40,9 @@ export const TicTacToe: React.FC = () => {
       </h2>
       {gameOver && <h3>Winner is {winner} !!!</h3>}
       <div className="m-2">
-        <Button variant="outlined" onClick={resetGame}>Restart Game</Button>
+        <Button variant="outlined" onClick={resetGame}>
+          Restart Game
+        </Button>
       </div>
     </>
   );
