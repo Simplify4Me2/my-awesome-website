@@ -9,6 +9,7 @@ export const Home: React.FC = () => {
   return (
     <>
       <Header />
+      {/* TODO: Use Container Layout component to wrap all the components */}
       <div className="flex flex-col items-center">
         <IntroductionCard />
         <Certificates />
