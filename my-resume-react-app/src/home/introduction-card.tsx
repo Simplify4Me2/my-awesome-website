@@ -19,7 +19,7 @@ export const IntroductionCard: React.FC = (props) => {
             I'm Simon
           </Typography>
           <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            Full-stack developer
+            Full-stack software developer
           </Typography>
           <Typography variant="body2">
             My main areas of expertise
