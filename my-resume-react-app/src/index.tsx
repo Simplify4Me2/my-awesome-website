@@ -3,8 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { TicTacToe } from "./tic-tac-toe/tic-tac-toe";
+import { PlanningPoker } from "./planning-poker/planning-poker";
 
 // TODO: https://reactjs.org/docs/code-splitting.html#route-based-code-splitting
 
@@ -17,6 +18,8 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/tic-tac-toe" element={<TicTacToe />} />
+        <Route path="/planning-poker" element={<PlanningPoker />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
