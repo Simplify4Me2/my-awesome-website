@@ -5,8 +5,7 @@
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
-    "test": "jest",
-    "eject": "react-scripts eject"
+    "test": "jest"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
