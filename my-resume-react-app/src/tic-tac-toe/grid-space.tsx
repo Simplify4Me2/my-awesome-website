@@ -1,7 +1,7 @@
 import React from "react";
 import { Mark } from "./mark.model";
-import { ReactComponent as Cross } from "./Cross.svg";
-import { ReactComponent as Nought } from "./Nought.svg";
+import Cross from "./Cross.svg";
+import Nought from "./Nought.svg";
 
 interface IGridSpaceProps {
   mark?: Mark;
