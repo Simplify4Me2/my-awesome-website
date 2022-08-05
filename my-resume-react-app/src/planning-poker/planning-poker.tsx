@@ -9,16 +9,16 @@ export const PlanningPoker: React.FC = () => {
       <Header />
       <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600">Planning Poker</h1>
       <Stack direction="row" spacing={2} className="m-6">
-        <PlanningPokerCard value={0} />
-        <PlanningPokerCard value={1} />
-        <PlanningPokerCard value={2} />
-        <PlanningPokerCard value={3} />
-        <PlanningPokerCard value={5} />
-        <PlanningPokerCard value={8} />
-        <PlanningPokerCard value={13} />
-        <PlanningPokerCard value={20} />
-        <PlanningPokerCard value={40} />
-        <PlanningPokerCard value={100} />
+        <PlanningPokerCard onClick={() => console.log("Card clicked")} value={0} />
+        <PlanningPokerCard onClick={() => console.log("Card clicked")} value={1} />
+        <PlanningPokerCard onClick={() => console.log("Card clicked")} value={2} />
+        <PlanningPokerCard onClick={() => console.log("Card clicked")} value={3} />
+        <PlanningPokerCard onClick={() => console.log("Card clicked")} value={5} />
+        <PlanningPokerCard onClick={() => console.log("Card clicked")} value={8} />
+        <PlanningPokerCard onClick={() => console.log("Card clicked")} value={13} />
+        <PlanningPokerCard onClick={() => console.log("Card clicked")} value={20} />
+        <PlanningPokerCard onClick={() => console.log("Card clicked")} value={40} />
+        <PlanningPokerCard onClick={() => console.log("Card clicked")} value={100} />
       </Stack>
     </>
   );
