@@ -7,8 +7,8 @@ export const PlanningPoker: React.FC = () => {
   return (
     <>
       <Header />
-      <h1>Planning Poker</h1>
-      <Stack direction="row" spacing={2}>
+      <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600">Planning Poker</h1>
+      <Stack direction="row" spacing={2} className="m-6">
         <PlanningPokerCard value={0} />
         <PlanningPokerCard value={1} />
         <PlanningPokerCard value={2} />
