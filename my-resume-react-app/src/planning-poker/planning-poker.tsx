@@ -8,6 +8,7 @@ export const PlanningPoker: React.FC = () => {
     <>
       <Header />
       <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600">Planning Poker</h1>
+      <h2>On hold untill I figure out how to do this without a backend service + caching</h2>
       <Stack direction="row" spacing={2} className="m-6">
         <PlanningPokerCard onClick={() => console.log("Card clicked")} value={0} />
         <PlanningPokerCard onClick={() => console.log("Card clicked")} value={1} />
