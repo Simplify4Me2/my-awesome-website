@@ -2,6 +2,8 @@ import React, { useRef, useLayoutEffect } from "react";
 import { Header } from "../components/header";
 import { Canvas, ThreeElements, useFrame } from "@react-three/fiber";
 
+// https://docs.pmnd.rs/react-three-fiber/getting-started/introduction
+
 export const Experiment: React.FC = () => {
   return (
     <>
