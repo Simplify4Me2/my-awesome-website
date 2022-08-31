@@ -1,10 +1,8 @@
 import React, { useRef, useLayoutEffect } from "react";
 import { Header } from "../components/header";
-// import * as THREE from "three";
 import { Canvas, ThreeElements, useFrame } from "@react-three/fiber";
 
 export const Experiment: React.FC = () => {
-
   return (
     <>
       <Header />
@@ -21,9 +19,11 @@ export const Experiment: React.FC = () => {
 const MyMesh: React.FC = () => {
   const ref = useRef<ThreeElements["mesh"]>(null);
 
-  useFrame((state, delta) => (ref.current.rotation.x += 0.01))
+  useFrame((state, delta) => {
+    if (ref.current !== null) ref.current.rotation.x += 0.01;
+  });
 
-   // useLayoutEffect(() => {
+  // useLayoutEffect(() => {
 
   // });
 
