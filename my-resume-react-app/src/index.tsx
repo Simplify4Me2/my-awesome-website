@@ -7,6 +7,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { TicTacToe } from "./tic-tac-toe/tic-tac-toe";
 import { PlanningPoker } from "./planning-poker/planning-poker";
 import { WasteSnake } from "./waste-snake/waste-snake";
+import { Experiment } from "./experiment/experiment";
 
 // TODO: https://reactjs.org/docs/code-splitting.html#route-based-code-splitting
 
@@ -21,6 +22,7 @@ root.render(
         <Route path="/tic-tac-toe" element={<TicTacToe />} />
         <Route path="/planning-poker" element={<PlanningPoker />} />
         <Route path="/waste-snake" element={<WasteSnake />} />
+        <Route path="/experiment" element={<Experiment />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
