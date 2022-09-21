@@ -3,7 +3,7 @@
 exports[`home renders 1`] = `
 <div>
   <div
-    class="flex flex-col items-center"
+    class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
   >
     Portfolio {}
   </div>
