@@ -4,18 +4,18 @@ import { CareerTimeline } from "./career-timeline";
 import { IntroductionCard } from "./introduction-card";
 import { Certificates } from "./certificates";
 import { Portfolio } from "./portfolio";
+import { Container } from "@mui/material";
 
 export const Home: React.FC = () => {
   return (
     <>
       <Header />
-      {/* TODO: Use Container Layout component to wrap all the components */}
-      <div className="flex flex-col items-center">
+      <Container>
         <IntroductionCard />
         <Certificates />
         <CareerTimeline />
         <Portfolio />
-      </div>
+      </Container>
     </>
   );
 };

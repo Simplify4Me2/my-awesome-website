@@ -2,7 +2,7 @@ import React from "react";
 
 export const Certificates: React.FC = () => {
   return (
-    <div className="flex m-10">
+    <div className="flex justify-center m-10">
       <img
         className="h-60 m-4"
         src="https://images.credly.com/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png"
