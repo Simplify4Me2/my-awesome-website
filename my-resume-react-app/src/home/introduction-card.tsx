@@ -40,6 +40,7 @@ export const IntroductionCard: React.FC = (props) => {
       </div>
       <CardActions className="flex justify-center">
         <Button size="small">See my work experience</Button>
+        <Button size="small">See my dev toolkit</Button>
       </CardActions>
     </Card>
   );

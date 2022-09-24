@@ -12,7 +12,12 @@ import { AccessTime, ChildCare } from "@mui/icons-material";
 import { Typography } from "@mui/material";
 
 
-export const CareerTimeline: React.FC = (props) => {
+export const CareerTimeline: React.FC = () => {
+
+  const handleLogoClick = (logo: string) => {
+    console.log("yoohoo ", logo);
+  };
+
   return (
     <Timeline position="alternate">
       <TimelineItem>
@@ -26,7 +31,7 @@ export const CareerTimeline: React.FC = (props) => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot color="primary">
+          <TimelineDot color="primary" className="hover:cursor-pointer" onClick={() => handleLogoClick("Protime")}>
             <AccessTime />
           </TimelineDot>
           <TimelineConnector />
@@ -49,7 +54,7 @@ export const CareerTimeline: React.FC = (props) => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot color="info">
+          <TimelineDot color="info" className="hover:cursor-pointer" onClick={() => handleLogoClick("Cegeka")}>
             <ChildCare />
           </TimelineDot>
           <TimelineConnector />

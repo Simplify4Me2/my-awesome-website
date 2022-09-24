@@ -1,10 +1,10 @@
 import React from "react";
 import { Header } from "../components/header";
-import { CareerTimeline } from "./career-timeline";
+import { Container } from "@mui/material";
 import { IntroductionCard } from "./introduction-card";
 import { Certificates } from "./certificates";
 import { Portfolio } from "./portfolio";
-import { Container } from "@mui/material";
+import { MyToolkit } from "./my-toolkit";
 
 export const Home: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ export const Home: React.FC = () => {
       <Container>
         <IntroductionCard />
         <Certificates />
-        <CareerTimeline />
+        <MyToolkit />
         <Portfolio />
       </Container>
     </>

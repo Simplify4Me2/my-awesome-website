@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import { Home } from './home';
 
 jest.mock('../components/header');
-jest.mock('./career-timeline');
+jest.mock('./my-toolkit');
 jest.mock('./introduction-card');
 jest.mock('./certificates');
 jest.mock('./portfolio', () => ({
