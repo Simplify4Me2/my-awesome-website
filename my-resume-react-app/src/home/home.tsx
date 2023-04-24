@@ -11,8 +11,11 @@ export const Home: React.FC = () => {
     <>
       <Header />
       <Container>
+        <div className="relative h-screen" >
+
         <IntroductionCard />
         <Certificates />
+        </div>
         <MyToolkit />
         <Portfolio />
       </Container>

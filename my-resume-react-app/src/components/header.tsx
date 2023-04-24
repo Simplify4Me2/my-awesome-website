@@ -1,6 +1,6 @@
 import React from "react";
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
-import { DeveloperMode } from "@mui/icons-material";
+import { Code } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
 export const Header: React.FC = (props) => {
@@ -8,7 +8,7 @@ export const Header: React.FC = (props) => {
     <Box sx={{ flexGrow: 1 }} className="sticky top-0 z-50">
       <AppBar position="static">
         <Toolbar>
-          <DeveloperMode className="pr-1" />
+          <Code className="pr-2" />
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <Link to="/">Simon Vereecke</Link>
           </Typography>
