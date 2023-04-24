@@ -19,6 +19,8 @@
 - https://catalins.tech/14-best-web-developer-portfolios-to-get-inspiration
 - http://www.pascalvangemert.nl/#/experiences
 - https://www.sitebuilderreport.com/inspiration/web-developer-designer-portfolios
+- http://annierudisill.com/index.html
+- https://michaelmannucci.com/web/
 
 Free API:
 - https://docs.microsoft.com/en-us/azure/cognitive-services/

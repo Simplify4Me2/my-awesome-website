@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef } from "react";
 import { Header } from "../components/header";
 import { Canvas, ThreeElements, useFrame } from "@react-three/fiber";
 
