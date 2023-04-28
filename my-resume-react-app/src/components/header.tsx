@@ -3,7 +3,7 @@ import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 import { Code } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
-export const Header: React.FC = (props) => {
+export function Header() {
   return (
     <Box sx={{ flexGrow: 1 }} className="sticky top-0 z-50">
       <AppBar position="static">

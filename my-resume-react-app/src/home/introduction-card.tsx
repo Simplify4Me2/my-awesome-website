@@ -7,7 +7,13 @@ import {
   Typography,
 } from "@mui/material";
 
-export const IntroductionCard: React.FC = (props) => {
+interface IntroductionCardProps {
+  onMyPortfolioButtonClicked: () => void;
+  onMyToolKitButtonClicked: () => void;
+}
+
+
+export function IntroductionCard({ onMyPortfolioButtonClicked, onMyToolKitButtonClicked } : IntroductionCardProps) {
   return (
     <Card className="justify-content m-3 pt-5" sx={{ minWidth: 275 }}>
       <div className="flex">
@@ -39,8 +45,8 @@ export const IntroductionCard: React.FC = (props) => {
         />
       </div>
       <CardActions className="flex justify-center">
-        <Button size="small">See my work experience</Button>
-        <Button size="small">See my dev toolkit</Button>
+        <Button size="small" onClick={onMyPortfolioButtonClicked}>See my work experience</Button>
+        <Button size="small" onClick={onMyToolKitButtonClicked}>See my dev toolkit</Button>
       </CardActions>
     </Card>
   );

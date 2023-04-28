@@ -10,20 +10,38 @@ import {
 } from "@mui/material";
 import { CareerTimeline } from "./career-timeline";
 
-export const MyToolkit: React.FC = () => {
+interface MyToolkitProps {
+  elementRef: React.MutableRefObject<HTMLDivElement | null>;
+}
+
+export function MyToolkit({ elementRef }: MyToolkitProps) {
   return (
     <>
-      <Card className="justify-content m-3 pt-5" sx={{ minWidth: 275 }}>
+      <Card
+        ref={elementRef}
+        className="justify-content m-3 pt-5"
+        sx={{ minWidth: 275 }}
+      >
         <span>My Toolkit</span>
         <TableContainer>
           <Table>
-            <TableHead >
+            <TableHead>
               <TableRow>
-                <TableCell><span className="font-bold">Frontend</span></TableCell>
-                <TableCell><span className="font-bold">Backend</span></TableCell>
-                <TableCell><span className="font-bold">DevOps</span></TableCell>
-                <TableCell><span className="font-bold">UX/UI</span></TableCell>
-                <TableCell><span className="font-bold">Scrum</span></TableCell>
+                <TableCell>
+                  <span className="font-bold">Frontend</span>
+                </TableCell>
+                <TableCell>
+                  <span className="font-bold">Backend</span>
+                </TableCell>
+                <TableCell>
+                  <span className="font-bold">DevOps</span>
+                </TableCell>
+                <TableCell>
+                  <span className="font-bold">UX/UI</span>
+                </TableCell>
+                <TableCell>
+                  <span className="font-bold">Scrum</span>
+                </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -69,4 +87,4 @@ export const MyToolkit: React.FC = () => {
       <CareerTimeline />
     </>
   );
-};
+}
