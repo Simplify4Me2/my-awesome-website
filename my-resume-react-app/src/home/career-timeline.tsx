@@ -8,12 +8,10 @@ import {
   TimelineOppositeContent,
   TimelineSeparator,
 } from "@mui/lab";
-import { AccessTime, ChildCare } from "@mui/icons-material";
+import { AccessTime, CorporateFare, School } from "@mui/icons-material";
 import { Typography } from "@mui/material";
 
-
 export const CareerTimeline: React.FC = () => {
-
   const handleLogoClick = (logo: string) => {
     console.log("yoohoo ", logo);
   };
@@ -22,7 +20,7 @@ export const CareerTimeline: React.FC = () => {
     <Timeline position="alternate">
       <TimelineItem>
         <TimelineOppositeContent
-          sx={{ m: 'auto 0' }}
+          sx={{ m: "auto 0" }}
           align="right"
           variant="body2"
           color="text.secondary"
@@ -31,22 +29,27 @@ export const CareerTimeline: React.FC = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot color="primary" className="hover:cursor-pointer" onClick={() => handleLogoClick("Protime")}>
+          <TimelineDot
+            color="primary"
+            className="hover:cursor-pointer"
+            onClick={() => handleLogoClick("Protime")}
+          >
             <AccessTime />
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: 2 }}>
+        <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography variant="h5" component="span">
             Protime
           </Typography>
-          <Typography color="text.secondary">Much more than time registration and workforce management</Typography>
+          <Typography color="text.secondary">
+            Much more than time registration and workforce management
+          </Typography>
         </TimelineContent>
       </TimelineItem>
+
       <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ py: '12px', px: 2 }}
-        >
+        <TimelineOppositeContent sx={{ py: "12px", px: 2 }}>
           <Typography variant="h5" component="span">
             Cegeka
           </Typography>
@@ -54,14 +57,49 @@ export const CareerTimeline: React.FC = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot color="info" className="hover:cursor-pointer" onClick={() => handleLogoClick("Cegeka")}>
-            <ChildCare />
+          <TimelineDot
+            color="info"
+            className="hover:cursor-pointer"
+            onClick={() => handleLogoClick("Cegeka")}
+          >
+            <CorporateFare />
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent sx={{ m: 'auto 0' }}
+        <TimelineContent
+          sx={{ m: "auto 0" }}
           variant="body2"
-          color="text.secondary">2017 - 2020</TimelineContent>
+          color="text.secondary"
+        >
+          2017 - 2020
+        </TimelineContent>
+      </TimelineItem>
+
+      <TimelineItem>
+        <TimelineOppositeContent
+          sx={{ m: "auto 0" }}
+          variant="body2"
+          color="text.secondary"
+        >
+          2015 - 2018
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineConnector />
+          <TimelineDot
+            color="info"
+            className="hover:cursor-pointer"
+            onClick={() => handleLogoClick("VDAB")}
+          >
+            <School />
+          </TimelineDot>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: "12px", px: 2 }}>
+          <Typography variant="h5" component="span">
+            VDAB / PXL
+          </Typography>
+          <Typography color="text.secondary">Switch 2 IT</Typography>
+        </TimelineContent>
       </TimelineItem>
     </Timeline>
   );

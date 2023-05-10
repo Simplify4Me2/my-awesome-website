@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useTransition } from "react";
+import React, { useRef } from "react";
 import { Header } from "../components/header";
 import { Container } from "@mui/material";
 import { IntroductionCard } from "./introduction-card";
@@ -10,7 +10,7 @@ export function Home() {
   const myToolkitRef = useRef<HTMLDivElement | null>(null);
   const myPortfolioRef = useRef<HTMLDivElement | null>(null);
 
-  function handleClick(ref: React.MutableRefObject<HTMLElement | null>) {
+  function scrollIntoView(ref: React.MutableRefObject<HTMLElement | null>) {
       ref && ref.current?.scrollIntoView();
   }
 
@@ -20,8 +20,8 @@ export function Home() {
       <Container>
         <Container className="relative h-screen">
           <IntroductionCard
-            onMyPortfolioButtonClicked={() => handleClick(myPortfolioRef)}
-            onMyToolKitButtonClicked={() => handleClick(myToolkitRef)}
+            onMyPortfolioButtonClicked={() => scrollIntoView(myPortfolioRef)}
+            onMyToolKitButtonClicked={() => scrollIntoView(myToolkitRef)}
           />
           <Certificates />
         </Container>
