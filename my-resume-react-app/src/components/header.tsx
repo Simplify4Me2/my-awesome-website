@@ -12,7 +12,7 @@ export function Header() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <Link to="/">Simon Vereecke</Link>
           </Typography>
-          <Button color="inherit">Contact</Button>
+          <Link to="/contact" color="inherit">Contact</Link>
         </Toolbar>
       </AppBar>
     </Box>
