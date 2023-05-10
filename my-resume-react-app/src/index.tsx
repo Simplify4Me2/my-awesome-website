@@ -3,9 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { Experiment, PlanningPoker, TicTacToe, WasteSnake } from "./app-ideas";
-import { Contact } from "./contact/contact";
+import { BrowserRouter } from "react-router-dom";
 
 // TODO: https://reactjs.org/docs/code-splitting.html#route-based-code-splitting
 
@@ -15,15 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/experiment" element={<Experiment />} />
-        <Route path="/planning-poker" element={<PlanningPoker />} />
-        <Route path="/tic-tac-toe" element={<TicTacToe />} />
-        <Route path="/waste-snake" element={<WasteSnake />} />
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
+      <App /> 
     </BrowserRouter>
   </React.StrictMode>
 );
