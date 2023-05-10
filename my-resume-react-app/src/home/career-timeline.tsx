@@ -11,9 +11,14 @@ import {
 import { AccessTime, CorporateFare, School } from "@mui/icons-material";
 import { Typography } from "@mui/material";
 
-export const CareerTimeline: React.FC = () => {
+interface ICareerTimelineProps {
+  onTimelineItemSelected: () => void;
+}
+
+export function CareerTimeline({ onTimelineItemSelected } : ICareerTimelineProps) {
   const handleLogoClick = (logo: string) => {
     console.log("yoohoo ", logo);
+    onTimelineItemSelected();
   };
 
   return (

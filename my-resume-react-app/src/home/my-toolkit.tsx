@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import classNames from "classnames";
 import {
   Card,
   Table,
@@ -15,6 +16,8 @@ interface MyToolkitProps {
 }
 
 export function MyToolkit({ elementRef }: MyToolkitProps) {
+  const [state, setState] = useState(false);
+
   return (
     <>
       <Card
@@ -46,7 +49,7 @@ export function MyToolkit({ elementRef }: MyToolkitProps) {
             </TableHead>
             <TableBody>
               <TableRow>
-                <TableCell className="underline">Angular</TableCell>
+                <TableCell className={classNames({'underline': state})}>Angular</TableCell>
                 <TableCell>C#</TableCell>
                 <TableCell>Azure DevOps</TableCell>
                 <TableCell>Figma</TableCell>
@@ -84,7 +87,7 @@ export function MyToolkit({ elementRef }: MyToolkitProps) {
           </Table>
         </TableContainer>
       </Card>
-      <CareerTimeline />
+      <CareerTimeline onTimelineItemSelected={() => setState(prev => !prev)} />
     </>
   );
 }
