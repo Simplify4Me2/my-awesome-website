@@ -46,7 +46,7 @@ export function MyToolkit({ elementRef }: MyToolkitProps) {
             </TableHead>
             <TableBody>
               <TableRow>
-                <TableCell>Angular</TableCell>
+                <TableCell className="underline">Angular</TableCell>
                 <TableCell>C#</TableCell>
                 <TableCell>Azure DevOps</TableCell>
                 <TableCell>Figma</TableCell>
