@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import classnames from "classnames";
 import {
   Timeline,
   TimelineConnector,
@@ -8,7 +9,7 @@ import {
   TimelineOppositeContent,
   TimelineSeparator,
 } from "@mui/lab";
-import { AccessTime, CorporateFare, School } from "@mui/icons-material";
+import { AccessTime, CorporateFare, CorporateFareTwoTone, School } from "@mui/icons-material";
 import { Typography } from "@mui/material";
 
 interface ICareerTimelineProps {
@@ -16,6 +17,9 @@ interface ICareerTimelineProps {
 }
 
 export function CareerTimeline({ onTimelineItemSelected } : ICareerTimelineProps) {
+
+  const [state, setState] = useState(false);
+
   const handleLogoClick = (logo: string) => {
     console.log("yoohoo ", logo);
     onTimelineItemSelected();
@@ -64,10 +68,12 @@ export function CareerTimeline({ onTimelineItemSelected } : ICareerTimelineProps
           <TimelineConnector />
           <TimelineDot
             color="info"
-            className="hover:cursor-pointer"
+            className={classnames('hover:cursor-pointer', { 'color' : state ? 'text.secondary' : 'text.primary' })}
             onClick={() => handleLogoClick("Cegeka")}
+            onMouseEnter={() => setState(true)}
+            onMouseLeave={() => setState(false)}
           >
-            <CorporateFare />
+            {state ? <CorporateFare /> : <CorporateFareTwoTone />}
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
