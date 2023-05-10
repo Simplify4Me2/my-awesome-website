@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import React from "react";
-import { Header } from "../components/header";
+import { Header } from "../../components/header";
 
 import { GridSpace } from "./grid-space";
 import { useTicTacToe } from "./useTicTacToe";

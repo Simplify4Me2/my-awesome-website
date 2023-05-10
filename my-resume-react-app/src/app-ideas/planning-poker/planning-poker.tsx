@@ -1,6 +1,6 @@
 import { Stack } from "@mui/material";
 import React from "react";
-import { Header } from "../components/header";
+import { Header } from "../../components/header";
 import { PlanningPokerCard } from "./planning-poker-card";
 
 export const PlanningPoker: React.FC = () => {

@@ -4,10 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { TicTacToe } from "./tic-tac-toe/tic-tac-toe";
-import { PlanningPoker } from "./planning-poker/planning-poker";
-import { WasteSnake } from "./waste-snake/waste-snake";
-import { Experiment } from "./experiment/experiment";
+import { Experiment, PlanningPoker, TicTacToe, WasteSnake } from "./app-ideas";
 
 // TODO: https://reactjs.org/docs/code-splitting.html#route-based-code-splitting
 
