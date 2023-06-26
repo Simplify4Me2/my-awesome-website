@@ -11,7 +11,11 @@ export function Home() {
   const myPortfolioRef = useRef<HTMLDivElement | null>(null);
 
   function scrollIntoView(ref: React.MutableRefObject<HTMLElement | null>) {
-      ref && ref.current?.scrollIntoView();
+    const headerHeight = "88px";
+    if (ref && ref.current) {
+      ref.current.style.scrollMargin = headerHeight;
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
   }
 
   return (

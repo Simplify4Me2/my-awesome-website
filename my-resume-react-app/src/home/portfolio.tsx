@@ -1,3 +1,4 @@
+import { Card, CardContent, Paper } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -21,6 +22,20 @@ export function Portfolio({ elementRef }: PortFolioProps) {
         </a>
       </span>
       <ul>
+        <Card
+          sx={{ maxWidth: 150 }}
+        >
+          <Link to="/tic-tac-toe">
+            <img src="/tictactoe_tile.jpeg" />
+          </Link>
+        </Card>
+        <Card
+          sx={{ maxWidth: 150 }}
+        >
+          <Link to="/planning-poker">
+            <img src="/planningpoker_tile.jpeg" />
+          </Link>
+        </Card>
         <li className="underline">
           <Link to="/tic-tac-toe">Tic Tac Toe</Link>
         </li>
