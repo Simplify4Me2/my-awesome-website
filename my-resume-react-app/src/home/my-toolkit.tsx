@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 import {
-  Card,
   Table,
   TableBody,
   TableCell,
@@ -17,15 +16,10 @@ interface MyToolkitProps {
 
 export function MyToolkit({ elementRef }: MyToolkitProps) {
   const [state, setState] = useState(false);
+  const [selectedCareerExperience, setSelectedCareerExperience] = useState<string[]>(['React']);
 
   return (
     <section ref={elementRef}>
-      {/* <Card
-        ref={elementRef}
-        className="justify-content m-3 pt-5"
-        sx={{ minWidth: 275 }}
-      > */}
-      {/* <span>My Toolkit</span> */}
       <h1 className="mb-2 mt-0 text-5xl font-medium leading-tight text-primary text-center">
         My Toolkit
       </h1>
@@ -61,7 +55,7 @@ export function MyToolkit({ elementRef }: MyToolkitProps) {
               <TableCell>Retrospective</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>React</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('React') })}>React</TableCell>
               <TableCell>Domain-Driven Design</TableCell>
               <TableCell>Gitlab</TableCell>
               <TableCell>Prototyping</TableCell>
@@ -91,10 +85,15 @@ export function MyToolkit({ elementRef }: MyToolkitProps) {
           </TableBody>
         </Table>
       </TableContainer>
-      {/* </Card> */}
       <CareerTimeline
-        onTimelineItemSelected={() => setState((prev) => !prev)}
+        onTimelineItemSelected={(companyName: string) => setSelectedCareerExperience(careerExperience[companyName])}
       />
     </section>
   );
 }
+
+const careerExperience : { [key: string]: string[] } = {
+  Protime: ['React'],
+  Cegeka: ['DevOps'],
+  VDAB: ['C#']
+};

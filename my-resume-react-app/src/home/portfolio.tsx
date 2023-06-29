@@ -46,7 +46,10 @@ export function Portfolio({ elementRef }: PortFolioProps) {
           <Link to="/waste-snake">Waste snake</Link>
         </li>
         <li className="underline">
-          <Link to="/experiment">Experiment</Link>
+          <Link to="/experiment">3D Experiment</Link>
+        </li>
+        <li className="underline">
+          <Link to="/experiment">Something with AI</Link>
         </li>
       </ul>
     </div>

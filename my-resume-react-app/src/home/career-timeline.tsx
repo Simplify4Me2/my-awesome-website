@@ -13,7 +13,7 @@ import { AccessTime, CorporateFare, CorporateFareTwoTone, School } from "@mui/ic
 import { Typography } from "@mui/material";
 
 interface ICareerTimelineProps {
-  onTimelineItemSelected: () => void;
+  onTimelineItemSelected: (companyName: string) => void;
 }
 
 export function CareerTimeline({ onTimelineItemSelected } : ICareerTimelineProps) {
@@ -22,7 +22,7 @@ export function CareerTimeline({ onTimelineItemSelected } : ICareerTimelineProps
 
   const handleLogoClick = (logo: string) => {
     console.log("yoohoo ", logo);
-    onTimelineItemSelected();
+    onTimelineItemSelected(logo);
   };
 
   return (
