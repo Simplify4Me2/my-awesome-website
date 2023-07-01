@@ -5,6 +5,7 @@ import { IntroductionCard } from "./introduction-card";
 import { Certificates } from "./certificates";
 import { Portfolio } from "./portfolio";
 import { MyToolkit } from "./my-toolkit";
+import { Footer } from "./footer";
 
 export function Home() {
   const myToolkitRef = useRef<HTMLDivElement | null>(null);
@@ -32,6 +33,7 @@ export function Home() {
         <MyToolkit elementRef={myToolkitRef} />
         <Portfolio elementRef={myPortfolioRef} />
       </Container>
+      <Footer />
     </>
   );
 };

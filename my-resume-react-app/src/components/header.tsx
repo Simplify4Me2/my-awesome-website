@@ -1,6 +1,4 @@
-import React from "react";
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
-import { Code } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
 export function Header() {
