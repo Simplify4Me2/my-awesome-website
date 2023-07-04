@@ -9,6 +9,6 @@ export function Footer() {
         justifyContent: 'center',
         p: 2
         }}>
-        &copy; 2023 Vereecke inc. All rights reserved
+        &copy; 2023 Simon Vereecke. All rights reserved
     </Box>
 }

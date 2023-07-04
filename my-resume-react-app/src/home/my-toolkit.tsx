@@ -15,8 +15,7 @@ interface MyToolkitProps {
 }
 
 export function MyToolkit({ elementRef }: MyToolkitProps) {
-  const [state, setState] = useState(false);
-  const [selectedCareerExperience, setSelectedCareerExperience] = useState<string[]>(['React']);
+  const [selectedCareerExperience, setSelectedCareerExperience] = useState<string[]>([]);
 
   return (
     <section ref={elementRef}>
@@ -46,41 +45,39 @@ export function MyToolkit({ elementRef }: MyToolkitProps) {
           </TableHead>
           <TableBody>
             <TableRow>
-              <TableCell className={classNames({ underline: state })}>
-                Angular
-              </TableCell>
-              <TableCell>C#</TableCell>
-              <TableCell>Azure DevOps</TableCell>
-              <TableCell>Figma</TableCell>
-              <TableCell>Retrospective</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Angular') })}>Angular</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('C#') })}>C#</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Azure DevOps') })}>Azure DevOps</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Figma') })}>Figma</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Retrospective') })}>Retrospective</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className={classNames({ underline: selectedCareerExperience.includes('React') })}>React</TableCell>
-              <TableCell>Domain-Driven Design</TableCell>
-              <TableCell>Gitlab</TableCell>
-              <TableCell>Prototyping</TableCell>
-              <TableCell>Kanban</TableCell>
+              <TableCell className={classNames({ 'font-bold': true, underline: selectedCareerExperience.includes('React') })}>React</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Domain-Driven Design') })}>Domain-Driven Design</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Gitlab') })}>Gitlab</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Prototyping') })}>Prototyping</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Kanban') })}>Kanban</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Redux</TableCell>
-              <TableCell>Entity Framework</TableCell>
-              <TableCell>Octopus</TableCell>
-              <TableCell>Material</TableCell>
-              <TableCell>Story Mapping</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Redux') })}>Redux</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Entity Framework') })}>Entity Framework</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Octopus') })}>Octopus</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Material UI') })}>Material UI</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Story Mapping') })}>Story Mapping</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>HTML</TableCell>
-              <TableCell>SQL Server</TableCell>
-              <TableCell>Docker</TableCell>
-              <TableCell>Invision</TableCell>
-              <TableCell>Example Mapping</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('HTML') })}>HTML</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('SQL Server') })}>SQL Server</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Docker') })}>Docker</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Invision') })}>Invision</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Test-Driven Design') })}>Test-Driven Design</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>CSS</TableCell>
-              <TableCell>CQRS</TableCell>
-              <TableCell>ARM</TableCell>
-              <TableCell>Design System</TableCell>
-              <TableCell>Agile</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('SCSS') })}>CSS</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('CQRS') })}>CQRS</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('ARM') })}>ARM</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Design System') })}>Design System</TableCell>
+              <TableCell className={classNames({ underline: selectedCareerExperience.includes('Agile') })}>Agile</TableCell>
             </TableRow>
           </TableBody>
         </Table>
@@ -93,7 +90,7 @@ export function MyToolkit({ elementRef }: MyToolkitProps) {
 }
 
 const careerExperience : { [key: string]: string[] } = {
-  Protime: ['React'],
-  Cegeka: ['DevOps'],
-  VDAB: ['C#']
+  Protime: ['C#', 'React', 'Gitlab', 'Octopus' ,'CQRS', 'Test-Driven Design', 'Kanban', 'Retrospective', 'Figma', 'Domain-Driven Design'],
+  Cegeka: ['C#', 'Azure DevOps', 'Angular', 'Redux', 'Agile', 'Test-Driven Design', 'Design System', 'Invision', 'SQL Server'],
+  VDAB: ['C#', 'HTML', 'SCSS', 'Agile', 'SQL Server', 'Angular', 'Entity Framework']
 };
