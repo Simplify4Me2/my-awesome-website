@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 export function Header() {
   return (
-    <Box sx={{ flexGrow: 1 }} className="sticky top-0 z-50">
+    <Box sx={{ 
+      flexGrow: 1,
+      background: 'primary'
+     }} className="sticky top-0 z-50">
       <AppBar position="static">
         <Toolbar>
           <img src="/logo.svg" className="h-12 pr-4" />

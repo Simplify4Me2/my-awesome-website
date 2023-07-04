@@ -23,7 +23,7 @@ export function Home() {
     <>
       <Header />
       <Container>
-        <Container className="relative h-screen">
+        <Container className="relative h-screen  pt-5">
           <IntroductionCard
             onMyPortfolioButtonClicked={() => scrollIntoView(myPortfolioRef)}
             onMyToolKitButtonClicked={() => scrollIntoView(myToolkitRef)}

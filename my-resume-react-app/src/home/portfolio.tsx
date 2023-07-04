@@ -1,4 +1,4 @@
-import { Card, CardContent, Paper } from "@mui/material";
+import { Card, CardContent, Container, Paper } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -9,8 +9,10 @@ interface PortFolioProps {
 export function Portfolio({ elementRef }: PortFolioProps) {
   return (
     <div ref={elementRef} className="m-6">
-      <h1>Portfolio</h1>
-      <span>
+      <h1 className="mb-2 mt-0 text-5xl font-medium leading-tight text-primary text-center">
+        Portfolio
+      </h1>
+      {/* <span>
         TODO: Add some small fun projects like{" "}
         <a
           className="underline"
@@ -20,38 +22,29 @@ export function Portfolio({ elementRef }: PortFolioProps) {
         >
           this
         </a>
-      </span>
-      <ul>
-        <Card
-          sx={{ maxWidth: 150 }}
-        >
-          <Link to="/tic-tac-toe">
-            <img src="/tictactoe_tile.jpeg" />
-          </Link>
-        </Card>
-        <Card
-          sx={{ maxWidth: 150 }}
-        >
-          <Link to="/planning-poker">
-            <img src="/planningpoker_tile.jpeg" />
-          </Link>
-        </Card>
-        <li className="underline">
-          <Link to="/tic-tac-toe">Tic Tac Toe</Link>
-        </li>
-        <li className="underline">
-          <Link to="/planning-poker">Planning Poker</Link>
-        </li>
-        <li className="underline">
-          <Link to="/waste-snake">Waste snake</Link>
-        </li>
-        <li className="underline">
-          <Link to="/experiment">3D Experiment</Link>
-        </li>
-        <li className="underline">
-          <Link to="/experiment">Something with AI</Link>
-        </li>
-      </ul>
+      </span> */}
+      <div className="flex flex-row justify-evenly">
+        <PortfolioTile link="/tic-tac-toe" imgSrc="/tictactoe_tile.jpeg" />
+        <PortfolioTile link="/planning-poker" imgSrc="/planningpoker_tile.jpeg" />
+        <PortfolioTile link="/waste-snake" imgSrc="/wastesnake_tile.jpeg" />
+        <PortfolioTile link="/experiment" imgSrc="/3d-experiment_tile.jpeg" />
+        <PortfolioTile link="/experiment" imgSrc="/somethingsomething-ai_tile.jpeg" />
+      </div>
     </div>
+  );
+}
+
+interface IPortfolioTileProps {
+  link: string;
+  imgSrc: string
+}
+
+function PortfolioTile({link, imgSrc} : IPortfolioTileProps) {
+  return (
+    <Card sx={{ maxWidth: 150 }}>
+      <Link to={link}>
+        <img src={imgSrc} />
+      </Link>
+    </Card>
   );
 }
