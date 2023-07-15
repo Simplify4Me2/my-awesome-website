@@ -1,17 +1,17 @@
 {
   "private": true,
-  "name": "my-resume",
+  "name": "my-awesome-website",
   "version": "1.0.0",
-  "repository": "https://github.com/Simplify4Me2/my-resume.git",
+  "repository": "https://github.com/Simplify4Me2/my-awesome-website.git",
   "author": "Simon <simon.vereecke@live.com>",
   "license": "MIT",
   "workspaces": [
-    "./my-resume-react-app"
+    "./my-awesome-website-react-app"
   ],
   "scripts": {
-    "build": "yarn workspace my-resume-react-app build",
-    "start": "yarn workspace my-resume-react-app start",
-    "test": "yarn workspace my-resume-react-app test"
+    "build": "yarn workspace my-awesome-website-react-app build",
+    "start": "yarn workspace my-awesome-website-react-app start",
+    "test": "yarn workspace my-awesome-website-react-app test"
   },
   "dependencies": {}
 }

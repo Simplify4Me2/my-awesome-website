@@ -1,8 +1,8 @@
 name: GitHub Actions
 on: [push]
 env:
-  AZURE_WEBAPP_NAME: my-resume-app
-  AZURE_WEBAPP_PACKAGE_PATH: 'my-resume-react-app'
+  AZURE_WEBAPP_NAME: my-awesome-website-app
+  AZURE_WEBAPP_PACKAGE_PATH: 'my-awesome-website-react-app'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,8 +22,8 @@ jobs:
       - name: Upload artifact for deployment
         uses: actions/upload-artifact@v3
         with: 
-          name: my-resume
-          path: ./my-resume-react-app/dist
+          name: my-awesome-website
+          path: ./my-awesome-website-react-app/dist
 
   deploy:
     runs-on: ubuntu-latest
@@ -33,7 +33,7 @@ jobs:
     - name: Download artifact from build jobs
       uses: actions/download-artifact@v3
       with:
-        name: my-resume
+        name: my-awesome-website
 
     - name: List files in the repository
       run: |
