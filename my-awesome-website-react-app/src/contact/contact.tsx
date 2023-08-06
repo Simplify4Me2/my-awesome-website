@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "../components/header";
 import { Box, Button, InputAdornment, Stack, TextField } from "@mui/material";
-import { AccountCircle } from "@mui/icons-material";
+import { Email, Phone } from "@mui/icons-material";
 
 export function Contact() {
   return (
@@ -39,8 +39,8 @@ export function Contact() {
                 <TextField label="First Name" variant="outlined" />
                 <TextField label="Last Name" />
               </Stack>
-                <TextField label="E-mail address" type="email" inputProps={{ startAdornment: (<InputAdornment position="start"><AccountCircle /></InputAdornment>) }} />
-                <TextField label="Phone" type="tel" />
+                <TextField label="E-mail address" type="email" InputProps={{ startAdornment: (<InputAdornment position="start"><Email /></InputAdornment>) }} />
+                <TextField label="Phone" type="tel" InputProps={{ startAdornment: (<InputAdornment position="start"><Phone /></InputAdornment>) }} />
                 <TextField label="Tell me about you" multiline minRows={4} maxRows={5}/>
                 <Button variant="contained" >Send</Button>
             </Stack>

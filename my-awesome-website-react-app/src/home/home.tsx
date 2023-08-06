@@ -30,6 +30,8 @@ export function Home() {
           />
           <Certificates />
         </Container>
+        // should I use forwardRef here ??
+        // https://react.dev/reference/react/forwardRef
         <MyToolkit elementRef={myToolkitRef} />
         <Portfolio elementRef={myPortfolioRef} />
       </Container>
