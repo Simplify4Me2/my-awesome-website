@@ -25,10 +25,11 @@ export function Portfolio({ elementRef }: PortFolioProps) {
       </span> */}
       <div className="flex flex-row justify-evenly">
         <PortfolioTile link="/tic-tac-toe" imgSrc="/tictactoe_tile.jpeg" />
-        <PortfolioTile link="/planning-poker" imgSrc="/planningpoker_tile.jpeg" />
-        <PortfolioTile link="/waste-snake" imgSrc="/wastesnake_tile.jpeg" />
+        {/* <PortfolioTile link="/planning-poker" imgSrc="/planningpoker_tile.jpeg" /> */}
+        {/* <PortfolioTile link="/waste-snake" imgSrc="/wastesnake_tile.jpeg" />
         <PortfolioTile link="/experiment" imgSrc="/3d-experiment_tile.jpeg" />
-        <PortfolioTile link="/experiment" imgSrc="/somethingsomething-ai_tile.jpeg" />
+        <PortfolioTile link="/experiment" imgSrc="/somethingsomething-ai_tile.jpeg" /> */}
+        <PortfolioTile link="/bin-2-dec" imgSrc="/bin2dec_tile.jpeg" />
       </div>
     </div>
   );
