@@ -7,11 +7,11 @@ interface IGridSpaceProps {
   onClick: () => void;
 }
 
-export const GridSpace: React.FC<IGridSpaceProps> = ({
+export function GridSpace({
   mark,
   disabled,
   onClick,
-}) => {
+} : IGridSpaceProps) {
   // custom animation for the mark to appear: https://blog.logrocket.com/creating-custom-animations-tailwind-css/
   return (
     <>

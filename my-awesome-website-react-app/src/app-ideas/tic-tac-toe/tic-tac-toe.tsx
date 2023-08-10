@@ -5,7 +5,7 @@ import { Header } from "../../components/header";
 import { GridSpace } from "./grid-space";
 import { useTicTacToe } from "./useTicTacToe";
 
-export const TicTacToe: React.FC = () => {
+export function TicTacToe() {
   const {
     spaces,
     mark,

@@ -6,9 +6,9 @@ interface IPlanningPokerCardProps {
   onClick: () => void;
 }
 
-export const PlanningPokerCard: React.FC<IPlanningPokerCardProps> = ({
+export function PlanningPokerCard({
   value, onClick
-}) => {
+} : IPlanningPokerCardProps) {
   return (
     <Paper elevation={3} className="h-36 w-24 flex justify-center items-center hover:bg-violet-600 hover:cursor-pointer" onClick={onClick}>
       <span className="p-1 m-2">{value}</span>

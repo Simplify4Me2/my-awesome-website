@@ -4,7 +4,7 @@ import { Canvas, ThreeElements, useFrame } from "@react-three/fiber";
 
 // https://docs.pmnd.rs/react-three-fiber/getting-started/introduction
 
-export const Experiment: React.FC = () => {
+export function Experiment() {
   return (
     <>
       <Header />

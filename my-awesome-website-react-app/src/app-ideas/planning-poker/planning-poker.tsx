@@ -3,7 +3,7 @@ import React from "react";
 import { Header } from "../../components/header";
 import { PlanningPokerCard } from "./planning-poker-card";
 
-export const PlanningPoker: React.FC = () => {
+export function PlanningPoker() {
   return (
     <>
       <Header />

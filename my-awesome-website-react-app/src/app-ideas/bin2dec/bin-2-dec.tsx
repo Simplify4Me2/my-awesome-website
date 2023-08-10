@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Header } from "../../components/header";
 import { Box, Button, TextField } from "@mui/material";
 
-export const Bin2Dec: React.FC = () => {
+export function Bin2Dec() {
     const [inputState, setInputState] = useState<string>("");
     const [isValid, setIsValid] = useState(true);
     const [resultState, setResultState] = useState<number | null>(null)

@@ -30,6 +30,8 @@ export function Portfolio({ elementRef }: PortFolioProps) {
         <PortfolioTile link="/experiment" imgSrc="/3d-experiment_tile.jpeg" />
         <PortfolioTile link="/experiment" imgSrc="/somethingsomething-ai_tile.jpeg" /> */}
         <PortfolioTile link="/bin-2-dec" imgSrc="/bin2dec_tile.jpeg" />
+        <PortfolioTile link="/border-radius-previewer" imgSrc="/border-radius-previewer_tile.jpeg" />
+
       </div>
     </div>
   );
