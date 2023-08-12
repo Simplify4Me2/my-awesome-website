@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Header } from "../../components/header";
-import { Box, Container } from "@mui/material";
+import { Box, Button, Container } from "@mui/material";
 import { RadiusInputField } from "./RadiusInputField";
 
 interface BorderRadius {
@@ -21,19 +21,35 @@ export function BorderRadiusPreviewer() {
   const [radius, setRadius] = useState<BorderRadius>(initialRadiusState);
 
   const handleTopLeftChange = (value: string) => {
-    setRadius(prev => {return {...prev, topLeft: value}} );
+    setRadius((prev) => {
+      return { ...prev, topLeft: value };
+    });
   };
 
   const handleTopRightChange = (value: string) => {
-    setRadius(prev => {return {...prev, topRight: value}} );
+    setRadius((prev) => {
+      return { ...prev, topRight: value };
+    });
   };
 
   const handleBottomLeftChange = (value: string) => {
-    setRadius(prev => {return {...prev, bottomLeft: value}} );
+    setRadius((prev) => {
+      return { ...prev, bottomLeft: value };
+    });
   };
 
   const handleBottomRightChange = (value: string) => {
-    setRadius(prev => {return {...prev, bottomRight: value}} );
+    setRadius((prev) => {
+      return { ...prev, bottomRight: value };
+    });
+  };
+
+  const copyCSSToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(`border-radius: ${radius.topLeft} ${radius.topRight} ${radius.bottomRight} ${radius.bottomLeft};`);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -54,12 +70,31 @@ export function BorderRadiusPreviewer() {
           }}
           maxWidth="xs"
         >
-          <RadiusInputField label="Border radius top left" onChange={handleTopLeftChange} />
-          <RadiusInputField label="Border radius top right" onChange={handleTopRightChange} />
-          <RadiusInputField label="Border radius bottom left" onChange={handleBottomLeftChange} />
-          <RadiusInputField label="Border radius bottom right" onChange={handleBottomRightChange} />
+          <RadiusInputField
+            label="Border radius top left"
+            onChange={handleTopLeftChange}
+          />
+          <RadiusInputField
+            label="Border radius top right"
+            onChange={handleTopRightChange}
+          />
+          <RadiusInputField
+            label="Border radius bottom left"
+            onChange={handleBottomLeftChange}
+          />
+          <RadiusInputField
+            label="Border radius bottom right"
+            onChange={handleBottomRightChange}
+          />
         </Container>
       </Container>
+      <Button
+        onClick={copyCSSToClipboard}
+        variant="outlined"
+        sx={{ marginTop: "3rem", marginLeft: "10rem" }}
+      >
+        Copy CSS to Clipboard
+      </Button>
     </>
   );
 }
