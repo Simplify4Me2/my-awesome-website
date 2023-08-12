@@ -1,48 +1,11 @@
-import React, { useState } from "react";
 import { Header } from "../../components/header";
-import { Box, Button, Container } from "@mui/material";
+import { Button, Container } from "@mui/material";
 import { RadiusInputField } from "./RadiusInputField";
-
-interface BorderRadius {
-  topLeft: string;
-  topRight: string;
-  bottomLeft: string;
-  bottomRight: string;
-}
-
-const initialRadiusState: BorderRadius = {
-  topLeft: "0px",
-  topRight: "0px",
-  bottomLeft: "0px",
-  bottomRight: "0px",
-};
+import { PreviewBox } from "./PreviewBox";
+import { useRadiusState } from "./useRadiusState";
 
 export function BorderRadiusPreviewer() {
-  const [radius, setRadius] = useState<BorderRadius>(initialRadiusState);
-
-  const handleTopLeftChange = (value: string) => {
-    setRadius((prev) => {
-      return { ...prev, topLeft: value };
-    });
-  };
-
-  const handleTopRightChange = (value: string) => {
-    setRadius((prev) => {
-      return { ...prev, topRight: value };
-    });
-  };
-
-  const handleBottomLeftChange = (value: string) => {
-    setRadius((prev) => {
-      return { ...prev, bottomLeft: value };
-    });
-  };
-
-  const handleBottomRightChange = (value: string) => {
-    setRadius((prev) => {
-      return { ...prev, bottomRight: value };
-    });
-  };
+  const { radius, updateBottomLeft, updateBottomRight, updateTopLeft, updateTopRight } = useRadiusState();
 
   const copyCSSToClipboard = async () => {
     try {
@@ -72,19 +35,19 @@ export function BorderRadiusPreviewer() {
         >
           <RadiusInputField
             label="Border radius top left"
-            onChange={handleTopLeftChange}
+            onChange={updateTopLeft}
           />
           <RadiusInputField
             label="Border radius top right"
-            onChange={handleTopRightChange}
+            onChange={updateTopRight}
           />
           <RadiusInputField
             label="Border radius bottom left"
-            onChange={handleBottomLeftChange}
+            onChange={updateBottomLeft}
           />
           <RadiusInputField
             label="Border radius bottom right"
-            onChange={handleBottomRightChange}
+            onChange={updateBottomRight}
           />
         </Container>
       </Container>
@@ -96,27 +59,5 @@ export function BorderRadiusPreviewer() {
         Copy CSS to Clipboard
       </Button>
     </>
-  );
-}
-
-interface IPreviewBoxProps {
-  radius: BorderRadius;
-}
-
-function PreviewBox({ radius }: IPreviewBoxProps) {
-  return (
-    <Box
-      sx={{
-        border: "solid",
-        height: "20rem",
-        width: "20rem",
-        minWidth: "20rem",
-        marginRight: "3rem",
-        borderTopLeftRadius: radius.topLeft,
-        borderTopRightRadius: radius.topRight,
-        borderBottomLeftRadius: radius.bottomLeft,
-        borderBottomRightRadius: radius.bottomRight,
-      }}
-    />
   );
 }
