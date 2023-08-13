@@ -1,6 +1,6 @@
 import React from "react";
-import { BorderRadius } from "./border-radius-previewer";
 import { Box } from "@mui/material";
+import { BorderRadius } from "./border-radius.model";
 
 interface IPreviewBoxProps {
     radius: BorderRadius;
@@ -19,6 +19,10 @@ interface IPreviewBoxProps {
           borderTopRightRadius: radius.topRight,
           borderBottomLeftRadius: radius.bottomLeft,
           borderBottomRightRadius: radius.bottomRight,
+          // borderStartStartRadius: '100px',
+          // borderStartEndRadius: '200px',
+          // borderEndStartRadius: '100px',
+          // borderEndEndRadius: '100px',
         }}
       />
     );
