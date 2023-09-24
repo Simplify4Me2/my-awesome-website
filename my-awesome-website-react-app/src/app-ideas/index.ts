@@ -4,4 +4,4 @@ export { PlanningPoker } from "./planning-poker/planning-poker";
 export { WasteSnake } from "./waste-snake/waste-snake";
 export { Bin2Dec } from "./bin2dec/bin-2-dec";
 export { BorderRadiusPreviewer } from "./border-radius-previewer/border-radius-previewer";
-export { BookFinder } from "./book-finder/BookFinder";
+export { BookFinder } from "./book-finder/book-finder";

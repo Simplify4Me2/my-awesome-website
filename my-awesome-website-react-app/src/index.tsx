@@ -1,20 +1,49 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Home } from "./home/home";
+import { Contact } from "./contact/contact";
 
-// TODO: https://reactjs.org/docs/code-splitting.html#route-based-code-splitting
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />
+  },
+  {
+    path: "contact",
+    element: <Contact />
+  },
+  {
+    path: "bin-2-dec",
+    lazy: () => import('./app-ideas/bin2dec/bin-2-dec')
+  },
+  {
+    path: "book-finder",
+    lazy: () => import('./app-ideas/book-finder/book-finder')
+  },
+  {
+    path: "border-radius-previewer",
+    lazy: () => import('./app-ideas/border-radius-previewer/border-radius-previewer')
+  },
+  {
+    path: "tic-tac-toe",
+    lazy: () => import('./app-ideas/tic-tac-toe/tic-tac-toe')
+  },
+  {
+    path: "*",
+    element: <Home />
+  }
+]);
+
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App /> 
-    </BrowserRouter>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

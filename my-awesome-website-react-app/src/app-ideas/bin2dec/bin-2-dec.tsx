@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Header } from "../../components/header";
 import { Box, Button, TextField } from "@mui/material";
 
-export function Bin2Dec() {
+export function Component() {
     const [inputState, setInputState] = useState<string>("");
     const [isValid, setIsValid] = useState(true);
     const [resultState, setResultState] = useState<number | null>(null)
@@ -38,3 +38,5 @@ export function Bin2Dec() {
     </>
   );
 };
+
+Component.displayName = "Bin 2 Dec Component"

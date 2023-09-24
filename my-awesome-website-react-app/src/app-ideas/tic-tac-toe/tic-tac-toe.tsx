@@ -5,7 +5,7 @@ import { Header } from "../../components/header";
 import { GridSpace } from "./grid-space";
 import { useTicTacToe } from "./useTicTacToe";
 
-export function TicTacToe() {
+export function Component() {
   const {
     spaces,
     mark,
@@ -47,3 +47,5 @@ export function TicTacToe() {
     </>
   );
 };
+
+Component.displayName = "Tic-Tac-Toe Component"

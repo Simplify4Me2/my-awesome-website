@@ -9,9 +9,11 @@ import {
 import { Header } from "../../components/header";
 import { Search } from "@mui/icons-material";
 import { useState } from "react";
+import { fetchBooks } from "../../api/fetchBooks";
 
-export function BookFinder() {
+export function Component() {
   const [state, setState] = useState<string>("");
+  // const {  } = fetchBooks(state);
 
   const handleClickSearchButton = () => {
     console.log("yolo: ", state);
@@ -55,3 +57,5 @@ export function BookFinder() {
     </>
   );
 }
+
+Component.displayName = "Book Finder Component"

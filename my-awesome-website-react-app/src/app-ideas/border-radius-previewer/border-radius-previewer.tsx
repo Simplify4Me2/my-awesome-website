@@ -4,7 +4,7 @@ import { RadiusInputField } from "./RadiusInputField";
 import { PreviewBox } from "./PreviewBox";
 import { useRadiusState } from "./useRadiusState";
 
-export function BorderRadiusPreviewer() {
+export function Component() {
   const { radius, updateBottomLeft, updateBottomRight, updateTopLeft, updateTopRight } = useRadiusState();
 
   const copyCSSToClipboard = async () => {
@@ -61,3 +61,5 @@ export function BorderRadiusPreviewer() {
     </>
   );
 }
+
+Component.displayName = "Border Radius Previewer Component"
