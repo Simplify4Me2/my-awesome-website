@@ -15,6 +15,13 @@ export function Component() {
   const [state, setState] = useState<string>("");
   // const {  } = fetchBooks(state);
 
+  const handleInputOnKeyDown = (keyboardEvent: React.KeyboardEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+    if (keyboardEvent.key === "Enter") {
+      keyboardEvent.preventDefault();
+      handleClickSearchButton();
+    }
+  };
+
   const handleClickSearchButton = () => {
     console.log("yolo: ", state);
   };
@@ -38,6 +45,7 @@ export function Component() {
             id="outlined-adornment-search"
             type="text"
             onChange={handleSearchInputValue}
+            onKeyDown={handleInputOnKeyDown}
             endAdornment={
               <InputAdornment position="end">
                 <IconButton
@@ -58,4 +66,4 @@ export function Component() {
   );
 }
 
-Component.displayName = "Book Finder Component"
+Component.displayName = "Book Finder Component";
