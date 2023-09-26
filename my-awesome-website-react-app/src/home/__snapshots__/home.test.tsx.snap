@@ -5,7 +5,12 @@ exports[`home renders 1`] = `
   <div
     class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
   >
-    Portfolio {}
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg relative h-screen  pt-5 css-1oqqzyl-MuiContainer-root"
+    />
+    // should I use forwardRef here ?? // https://react.dev/reference/react/forwardRef
+    Portfolio {"elementRef":{"current":null}}
+    Portfolio {"elementRef":{"current":null}}
   </div>
 </div>
 `;
