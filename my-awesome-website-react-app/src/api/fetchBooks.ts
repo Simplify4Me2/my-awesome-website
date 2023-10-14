@@ -1,8 +1,13 @@
-import { useFetcher } from "react-router-dom";
-import { useFetch } from "../hooks";
+import { useFetcher } from "../hooks";
+import { Volumes } from "./models";
 
-export function fetchBooks(searchTerm: string) {
-    const fetcher = useFetcher();
+export function fetchBooks() {
+  const { load, state } = useFetcher<Volumes>();
 
-    return fetcher.load('');
+  function fetch(searchTerm: string) {
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&maxResults=40`;
+    load(url);
+  }
+
+  return { fetch, ...state };
 }

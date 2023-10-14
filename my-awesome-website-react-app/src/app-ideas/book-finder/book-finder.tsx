@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   Box,
   FormControl,
@@ -10,10 +11,11 @@ import { Header } from "../../components/header";
 import { Search } from "@mui/icons-material";
 import { useState } from "react";
 import { fetchBooks } from "../../api/fetchBooks";
+import { Volume } from "../../api/models";
 
 export function Component() {
-  const [state, setState] = useState<string>("");
-  // const {  } = fetchBooks(state);
+  const [searchTerm, setSearchTerm] = useState<string | undefined>();
+  const { fetch, data } = fetchBooks();
 
   const handleInputOnKeyDown = (keyboardEvent: React.KeyboardEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     if (keyboardEvent.key === "Enter") {
@@ -23,14 +25,18 @@ export function Component() {
   };
 
   const handleClickSearchButton = () => {
-    console.log("yolo: ", state);
+    console.log("yolo: ", searchTerm);
+    searchTerm && fetch(searchTerm);
   };
 
   const handleSearchInputValue = (
     event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => {
-    setState(event.target.value);
+    setSearchTerm(event.target.value);
   };
+
+  useEffect(() => {data && console.log(data);
+  }, [data])
 
   return (
     <>
@@ -62,8 +68,19 @@ export function Component() {
           />
         </FormControl>
       </Box>
+      {data && data.totalItems}
+      {data && <p>list length: {data.items.length}</p>}
+      {data && data.items.map(item => <Book volume={item} />)}
     </>
   );
 }
 
 Component.displayName = "Book Finder Component";
+
+
+function Book({volume}: {volume: Volume}) {
+  return <>
+  <p>{volume.volumeInfo.title} - {volume.volumeInfo.authors}</p>
+  {/* <p>{JSON.stringify(volume.volumeInfo)}</p> */}
+  </>
+}
