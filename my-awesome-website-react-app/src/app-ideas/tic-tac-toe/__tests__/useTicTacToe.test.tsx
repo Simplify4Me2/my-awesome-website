@@ -1,8 +1,8 @@
 import { renderHook } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
 
-import { Mark } from "./mark.model";
-import { useTicTacToe } from "./useTicTacToe";
+import { Mark } from "../mark.model";
+import { useTicTacToe } from "../useTicTacToe";
 
 describe("useTicTacToe", () => {
   describe("verifyWinner", () => {
