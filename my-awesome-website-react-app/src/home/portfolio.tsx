@@ -1,14 +1,13 @@
 import { Card } from "@mui/material";
-import React from "react";
+import React, { forwardRef } from "react";
 import { Link } from "react-router-dom";
 
 interface PortFolioProps {
-  elementRef: React.MutableRefObject<HTMLDivElement | null>;
 }
 
-export function Portfolio({ elementRef }: PortFolioProps) {
+export const Portfolio = forwardRef(function Portfolio({ }: PortFolioProps, ref: React.ForwardedRef<HTMLDivElement>) {
   return (
-    <div ref={elementRef} className="m-6">
+    <div ref={ref} className="m-6">
       <h1 className="mb-2 mt-0 text-5xl font-medium leading-tight text-primary text-center">
         Portfolio
       </h1>
@@ -37,7 +36,7 @@ export function Portfolio({ elementRef }: PortFolioProps) {
       </div>
     </div>
   );
-}
+});
 
 interface IPortfolioTileProps {
   link: string;

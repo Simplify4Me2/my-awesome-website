@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import classNames from "classnames";
 import {
   Table,
@@ -11,14 +11,13 @@ import {
 import { CareerTimeline } from "./career-timeline";
 
 interface MyToolkitProps {
-  elementRef: React.MutableRefObject<HTMLDivElement | null>;
 }
 
-export function MyToolkit({ elementRef }: MyToolkitProps) {
+export const MyToolkit = forwardRef(function MyToolkit({ }: MyToolkitProps, ref: React.ForwardedRef<HTMLElement>) {
   const [selectedCareerExperience, setSelectedCareerExperience] = useState<string[]>([]);
 
   return (
-    <section ref={elementRef}>
+    <section ref={ref}>
       <h1 className="mb-2 mt-0 text-5xl font-medium leading-tight text-primary text-center">
         My Toolkit
       </h1>
@@ -87,7 +86,7 @@ export function MyToolkit({ elementRef }: MyToolkitProps) {
       />
     </section>
   );
-}
+});
 
 const careerExperience : { [key: string]: string[] } = {
   Protime: ['C#', 'React', 'Gitlab', 'Octopus' ,'CQRS', 'Test-Driven Design', 'Kanban', 'Retrospective', 'Figma', 'Domain-Driven Design'],
