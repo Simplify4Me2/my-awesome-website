@@ -16,7 +16,7 @@ interface IntroductionCardProps {
 export function IntroductionCard({ onMyPortfolioButtonClicked, onMyToolKitButtonClicked } : IntroductionCardProps) {
   return (
     <Card className="justify-content pt-5" sx={{ minWidth: 275 }}>
-      <div className="flex">
+      <div className="flex flex-col-reverse lg:flex-row">
         <CardContent className="mt-12">
           <Typography  sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
             Hi

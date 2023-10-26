@@ -23,7 +23,7 @@ export function Portfolio({ elementRef }: PortFolioProps) {
           this
         </a>
       </span> */}
-      <div className="flex flex-row justify-evenly">
+      <div className="flex flex-row flex-wrap justify-evenly">
         <PortfolioTile link="/tic-tac-toe" imgSrc="/tictactoe_tile.jpeg" />
         {/* <PortfolioTile link="/planning-poker" imgSrc="/planningpoker_tile.jpeg" /> */}
         {/* <PortfolioTile link="/waste-snake" imgSrc="/wastesnake_tile.jpeg" />
@@ -46,7 +46,7 @@ interface IPortfolioTileProps {
 
 function PortfolioTile({link, imgSrc} : IPortfolioTileProps) {
   return (
-    <Card sx={{ maxWidth: 150 }}>
+    <Card className="m-2" sx={{ maxWidth: 150 }}>
       <Link to={link}>
         <img src={imgSrc} />
       </Link>
