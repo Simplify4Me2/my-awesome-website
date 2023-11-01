@@ -51,7 +51,10 @@ export const MyToolkit = forwardRef(function MyToolkit({ }: MyToolkitProps, ref:
               <TableCell className={classNames({ underline: selectedCareerExperience.includes('Retrospective') })}>Retrospective</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className={classNames({ 'font-bold': true, underline: selectedCareerExperience.includes('React') })}>React</TableCell>
+            {/* https://www.hyperui.dev/blog/text-shadow-with-tailwindcss */}
+              <TableCell sx={ {
+                textShadow: "2px 2px"
+              } } className={classNames({ 'font-bold': true, underline: selectedCareerExperience.includes('React') })}>React</TableCell>
               <TableCell className={classNames({ underline: selectedCareerExperience.includes('Domain-Driven Design') })}>Domain-Driven Design</TableCell>
               <TableCell className={classNames({ underline: selectedCareerExperience.includes('Gitlab') })}>Gitlab</TableCell>
               <TableCell className={classNames({ underline: selectedCareerExperience.includes('Prototyping') })}>Prototyping</TableCell>
