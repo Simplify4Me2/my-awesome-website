@@ -45,7 +45,7 @@ interface IPortfolioTileProps {
 
 function PortfolioTile({link, imgSrc} : IPortfolioTileProps) {
   return (
-    <Card className="m-2" sx={{ maxWidth: 150 }}>
+    <Card className="m-2" sx={{ maxWidth: 100 }}>
       <Link to={link}>
         <img src={imgSrc} />
       </Link>
