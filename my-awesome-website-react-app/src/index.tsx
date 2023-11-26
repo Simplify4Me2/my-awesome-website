@@ -6,6 +6,20 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Home } from "./home/home";
 import { Contact } from "./contact/contact";
 
+import { init, identify, track } from "mixpanel-browser";
+
+init('0f87eaa3213984698f3f1067bc243571', {debug: true, track_pageview: true, persistence: 'localStorage'});
+ 
+// Set this to a unique identifier for the user performing the event.
+identify('USER_ID')
+ 
+// Track an event. It can be anything, but in this example, we're tracking a Sign Up event.
+track('Sign Up', {
+  'Signup Type': 'Referral'
+})
+
+
+
 const router = createBrowserRouter([
   {
     path: "/",
