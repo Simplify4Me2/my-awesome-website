@@ -13,6 +13,7 @@ import { useState } from "react";
 import { fetchBooks } from "../../api/fetchBooks";
 import { Volume } from "../../api/models";
 
+// https://github.com/florinpop17/app-ideas/blob/master/Projects/2-Intermediate/Book-Finder-App.md
 export function Component() {
   const [searchTerm, setSearchTerm] = useState<string | undefined>();
   const { fetch, data } = fetchBooks();

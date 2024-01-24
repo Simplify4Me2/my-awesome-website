@@ -20,11 +20,17 @@
 - http://www.pascalvangemert.nl/#/experiences
 - https://www.sitebuilderreport.com/inspiration/web-developer-designer-portfolios
 
-Free API:
+## Free API
 - https://docs.microsoft.com/en-us/azure/cognitive-services/
 - https://rapidapi.com/api-sports/api/api-football/
 - https://apipheny.io/free-api/
 - https://world.openfoodfacts.org/data
 
-Animations:
+## Animations
 - https://www.hongkiat.com/blog/svg-animations/
+
+## Design
+- https://dribbble.com/shots/6335238-Developer-Personal-Portfolio
+- https://dribbble.com/shots/5348661-Full-Stack-Developer
+- https://dribbble.com/shots/11457720-New-portfolio-home-page
+- https://dribbble.com/shots/9779928-Portfolio-HOME-page
