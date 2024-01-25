@@ -1,4 +1,5 @@
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
+import Link from "next/link";
 
 export function Header() {
   return (
@@ -11,16 +12,14 @@ export function Header() {
     >
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: "flex", flexDirection: "row", alignItems: "center" }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Link href="/" className="flex flex-row items-center">
             <img src="/logo.svg" className="h-12 pr-4" />
             <span>Simon Vereecke</span>
-            {/* <Link to="/" className="flex flex-row items-center">
-            </Link> */}
+            </Link>
           </Typography>
           <Typography variant="h6">
-            {/* <Link to="/contact" color="inherit">
-              Contact
-            </Link> */}
+            <Link href={"/contact"} color="inherit">Contact</Link>
           </Typography>
         </Toolbar>
       </AppBar>
