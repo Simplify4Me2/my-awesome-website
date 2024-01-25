@@ -6,7 +6,7 @@ exports[`home renders 1`] = `
     class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
   >
     <div
-      class="MuiContainer-root MuiContainer-maxWidthLg relative h-screen  pt-5 css-1oqqzyl-MuiContainer-root"
+      class="MuiContainer-root MuiContainer-maxWidthLg relative pt-5 css-1oqqzyl-MuiContainer-root"
     />
     Portfolio {}
     Portfolio {}
