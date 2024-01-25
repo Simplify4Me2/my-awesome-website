@@ -31,7 +31,7 @@ export default function Home() {
           >
             By{' '}
             <Image
-              src="/logo512.png"
+              src="/logo512.svg"
               alt="My Logo"
               className="dark:invert"
               width={100}
