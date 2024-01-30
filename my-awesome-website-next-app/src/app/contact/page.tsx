@@ -5,6 +5,7 @@ export default function Contact() {
     <>
       <Header />
       <h1>Contact</h1>
+      <h2>I have been expecting you</h2>
     </>
   );
 }
