@@ -1,5 +1,7 @@
 name: GitHub Actions
-on: [push]
+on: 
+  schedule:
+    - cron: '30 5 15 * 1'
 env:
   AZURE_WEBAPP_NAME: my-awesome-website-app
   AZURE_WEBAPP_PACKAGE_PATH: 'my-awesome-website-react-app'
