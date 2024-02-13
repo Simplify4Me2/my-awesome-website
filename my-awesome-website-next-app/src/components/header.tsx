@@ -15,8 +15,8 @@ export function Header() {
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <Link href="/" className="flex flex-row items-center">
-            <Image src="/logo.svg" className="h-12 pr-4" alt="Logo" />
-            <span>Simon Vereecke</span>
+              <Image src="/logo.svg" className="h-12 pr-4" alt="Logo" width={50} height={50} />
+              <span>Simon Vereecke</span>
             </Link>
           </Typography>
           <Typography variant="h6">
