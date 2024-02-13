@@ -304,6 +304,11 @@
   resolved "https://registry.yarnpkg.com/@mui/core-downloads-tracker/-/core-downloads-tracker-5.15.6.tgz#9b82ba86d5a0fe55e9479b68dd5068943cc3835b"
   integrity sha512-0aoWS4qvk1uzm9JBs83oQmIMIQeTBUeqqu8u+3uo2tMznrB5fIKqQVCbCgq+4Tm4jG+5F7dIvnjvQ2aV7UKtdw==
 
+"@mui/material-nextjs@^5.15.9":
+  version "5.15.9"
+  resolved "https://registry.yarnpkg.com/@mui/material-nextjs/-/material-nextjs-5.15.9.tgz#2491a9c26ff258a93edc3d6b35d0fb793dff193f"
+  integrity sha512-Bk4Qb/cLpRhnoYPIyVJZvIlmjDNAHAUGB+UYaiRMEOnS1puQHxq81uw5gdBw+h3Q1WsT4PQ+ARmrfTkzN0RsFw==
+
 "@mui/material@^5.15.6":
   version "5.15.6"
   resolved "https://registry.yarnpkg.com/@mui/material/-/material-5.15.6.tgz#e32944ae4e01f85b314bc26e4cbbb700d598f30c"

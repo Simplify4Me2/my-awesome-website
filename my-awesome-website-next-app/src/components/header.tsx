@@ -1,5 +1,6 @@
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Header() {
   return (
@@ -14,7 +15,7 @@ export function Header() {
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <Link href="/" className="flex flex-row items-center">
-            <img src="/logo.svg" className="h-12 pr-4" />
+            <Image src="/logo.svg" className="h-12 pr-4" alt="Logo" />
             <span>Simon Vereecke</span>
             </Link>
           </Typography>

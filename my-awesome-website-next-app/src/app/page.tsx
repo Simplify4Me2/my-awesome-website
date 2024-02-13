@@ -1,7 +1,5 @@
-import Image from "next/image";
-
 import Mixpanel from "mixpanel";
-import { Header, Footer } from "@/components";
+import { Header } from "@/components";
 import { Link, Typography } from "@mui/material";
 
 // https://eu.mixpanel.com/project/3155699/view/3668731/app/boards#discover
@@ -22,7 +20,7 @@ export default function Page() {
         Hi
       </Typography>
       <Typography variant="h5" component="div">
-        I'm Simon
+        I&lsquo;m Simon
       </Typography>
       <Typography sx={{ mb: 1.5, fontSize: 36 }} color="text.secondary">
         Full-stack software developer
@@ -33,7 +31,6 @@ export default function Page() {
         user experience.
       </Typography>
       <Link href="qr-code">Link to QR Code Component</Link>
-      {/* <Footer /> */}
     </main>
   );
 }
