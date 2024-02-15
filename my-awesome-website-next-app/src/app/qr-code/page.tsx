@@ -17,11 +17,15 @@ export default function QRCode() {
               height={37}
               priority
             />
-            <h1 className="font-bold">Improve your front-end</h1>
-            <h1 className="font-bold">skills by building projects</h1>
-            <h2 className="font-normal text-sm">Scan the QR code to visit Frontend</h2>
-            <h2 className="font-normal text-sm">Mentor and take your coding skills to</h2>
-            <h2 className="font-normal text-sm">the next level</h2>
+            <h1 className="font-bold flex flex-col items-center">
+              <span>Improve your front-end</span>
+              <span>skills by building projects</span>
+            </h1>
+            <p className="font-normal text-sm text-slate-400 flex flex-col items-center">
+              <span>Scan the QR code to visit Frontend</span>
+              <span>Mentor and take your coding skills to</span>
+              <span>the next level</span>
+            </p>
           </div>
         </div>
       </main>
