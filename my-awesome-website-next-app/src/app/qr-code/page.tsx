@@ -8,7 +8,7 @@ export default function QRCode() {
         <Header />
 
         <div className="flex justify-center m-10">
-          <div className="bg-white flex flex-col items-center rounded-xl">
+          <div className="font-outfit bg-white flex flex-col items-center rounded-xl">
             <Image
               className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert rounded-xl m-2"
               src="/image-qr-code.png"
@@ -19,9 +19,9 @@ export default function QRCode() {
             />
             <h1 className="font-bold">Improve your front-end</h1>
             <h1 className="font-bold">skills by building projects</h1>
-            <h2 className="text-sm">Scan the QR code to visit Frontend</h2>
-            <h2 className="text-sm">Mentor and take your coding skills to</h2>
-            <h2 className="text-sm">the next level</h2>
+            <h2 className="font-normal text-sm">Scan the QR code to visit Frontend</h2>
+            <h2 className="font-normal text-sm">Mentor and take your coding skills to</h2>
+            <h2 className="font-normal text-sm">the next level</h2>
           </div>
         </div>
       </main>
