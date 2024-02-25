@@ -9,12 +9,20 @@ export default function QRCode() {
 
         <div className="flex justify-center my-40">
           <div className="font-outfit bg-white flex flex-col items-center rounded-xl p-2">
-            <Image
+            {/* <Image
               className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert rounded-xl m-2"
               src="/image-qr-code.png"
               alt="QR code"
               width={200}
               height={37}
+              priority
+            /> */}
+            <Image
+              src="/logo512.svg"
+              alt="My Logo"
+              className="dark:invert"
+              width={100}
+              height={24}
               priority
             />
             <h1 className="font-bold flex flex-col items-center m-2">
