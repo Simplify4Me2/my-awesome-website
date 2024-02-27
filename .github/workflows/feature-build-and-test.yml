@@ -27,6 +27,8 @@ jobs:
                 restore-keys: |
                   ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
             - name: Install dependencies
+              working-directory: ./my-awesome-website-next-app
               run: yarn install
             - name: Build with Next.js
+              working-directory: ./my-awesome-website-next-app
               run: yarn build
