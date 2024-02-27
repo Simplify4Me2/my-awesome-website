@@ -1,0 +1,18 @@
+name: Build and test feature branch
+
+on: 
+    push:
+        branches:
+            - 'feature/**'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            - name: Setup Npde
+              uses: actions:setup-node@v3
+              with:
+                node-version: "18.17.1"
+                cache: yarn
