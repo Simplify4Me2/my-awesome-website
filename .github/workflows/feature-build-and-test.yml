@@ -32,3 +32,6 @@ jobs:
             - name: Build with Next.js
               working-directory: ./my-awesome-website-next-app
               run: yarn build
+            - name: Test with Jest
+              working-directory: ./my-awesome-website-next-app
+              run: yarn test
