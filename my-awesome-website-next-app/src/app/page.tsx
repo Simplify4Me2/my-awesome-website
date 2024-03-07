@@ -1,7 +1,7 @@
 import Mixpanel from "mixpanel";
 import { Header } from "@/components";
 import { Link, Typography } from "@mui/material";
-import { ToggleSwitch } from "./components/toggle-switch";
+import { ToggleSwitch } from "@/components/toggle-switch";
 
 // https://eu.mixpanel.com/project/3155699/view/3668731/app/boards#discover
 
