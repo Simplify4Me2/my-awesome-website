@@ -1,10 +1,29 @@
 import { Header } from "@/components/header";
+import { AppBar, Link, Toolbar, Typography } from "@mui/material";
 import Image from "next/image";
 
 export default function QRCode() {
   return (
-    <main className="bg-slate-200 h-screen flex flex-col justify-center">
-        <Header />
+    <main className="bg-slate-200 h-screen">
+      <Header />
+      {/* <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Link href="/" className="flex flex-row items-center">
+              <Image src="/logo.svg" className="h-12 pr-4" alt="Logo" width={50} height={50} />
+              <span>Simon Vereecke</span>
+            </Link>
+          </Typography>
+          <Typography variant="h6">
+            <Link href={"/contact"} color="inherit">Contact</Link>
+          </Typography>
+        </Toolbar>
+      </AppBar> */}
+      {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Link href="/" className="flex flex-row items-center m-3">
+              <Image src="/logo.svg" className="h-12 pr-4" alt="Logo" width={50} height={50} />
+            </Link>
+          </Typography> */}
       <div className="flex justify-center">
         <div className="font-outfit bg-white flex flex-col items-center rounded-xl p-2 drop-shadow-xl">
           <Image
