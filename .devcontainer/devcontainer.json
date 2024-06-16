@@ -18,5 +18,6 @@
              "inspiration.md"
          ]
      }
- }
+ },
+  "postCreateCommand": "bash -i -c 'nvm install --lts'"
 }
